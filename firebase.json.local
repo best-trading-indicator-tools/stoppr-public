@@ -1,0 +1,47 @@
+{
+  "flutter": {
+    "platforms": {
+      "ios": {
+        "default": {
+          "projectId": "YOUR_PROJECT_ID",
+          "appId": "YOUR_IOS_APP_ID",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "android": {
+        "default": {
+          "projectId": "YOUR_PROJECT_ID",
+          "appId": "YOUR_ANDROID_APP_ID",
+          "fileOutput": "android/app/google-services.json"
+        }
+      }
+    }
+  },
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "functions": {
+    "source": "tools/firebase_cloud/functions",
+    "predeploy": "npm --prefix \"$RESOURCE_DIR\" install",
+    "runtime": "nodejs18"
+  },
+  "storage": {
+    "rules": "storage.rules"
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "extensions": {
+    "firestore-stripe-payments": "invertase/firestore-stripe-payments@0.3.9"
+  }
+}

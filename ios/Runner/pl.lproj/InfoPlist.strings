@@ -1,0 +1,10 @@
+"NSUserTrackingUsageDescription" = "Pozwól nam śledzić Twoją drogę, abyśmy mogli zrozumieć, która kampania sprowadziła Cię do STOPPR. To pomaga nam dotrzeć do większej liczby osób, które chcą zrezygnować z cukru i czuć się lepiej. Więcej użytkowników oznacza więcej motywacji, wspólny postęp i lepsze narzędzia dla Ciebie. Włącz zgodę, wesprzyj nasz rozwój i dołącz do ruchu na rzecz życia jasno, energicznie i bez cukru!";
+
+"NSCameraUsageDescription" = "Używamy aparatu, abyś mógł(a) robić zdjęcia posiłków do śledzenia.";
+"NSLocationWhenInUseUsageDescription" = "Używamy Twojej lokalizacji, aby znaleźć zdrowe opcje w pobliżu.";
+"NSPhotoLibraryUsageDescription" = "Używamy biblioteki zdjęć, abyś mógł(a) wybierać zdjęcia posiłków.";
+"NSMicrophoneUsageDescription" = "Używamy mikrofonu, aby umożliwić czat głosowy z Melindą.";
+"NSContactsUsageDescription" = "Używamy kontaktów, abyś mógł(a) udostępniać widżet serii znajomym.";
+"NSUserNotificationsUsageDescription" = "Włączenie powiadomień zwiększa o 63% szanse na oparcie się zachciankom na cukier. Powiadomienia mogą obejmować alerty, dźwięki i odznaki ikon. Można je skonfigurować w Ustawieniach.";
+"NSUserNotificationUsageDescription" = "Włączenie powiadomień zwiększa o 63% szanse na oparcie się zachciankom na cukier. Powiadomienia mogą obejmować alerty, dźwięki i odznaki ikon. Można je skonfigurować w Ustawieniach.";
+

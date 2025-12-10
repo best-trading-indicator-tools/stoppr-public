@@ -1,0 +1,13 @@
+Naše okolie významne ovplyvňuje stravovacie návyky, často nevedome. Pomysli na kancelárie plné sladkostí alebo spoločenské stretnutia, kde sú dezerty v centre diania. Tieto vonkajšie podnety môžu spúšťať túžby a sťažiť dodržiavanie nízkocukrového životného štýlu, aj keď máš silnú vnútornú motiváciu. Výskum environmentálnej psychológie ukázal, že ľudia skonzumujú až o 40% viac kalórií, keď sú obklopení viditeľnými sladkými snackmi v porovnaní s prostrediami, kde sú tieto jedlá mimo dohľadu. Štúdie tiež preukázali, že už samotná prítomnosť potravín bohatých na cukor môže zvýšiť kortizol a spustiť „stresové jedenie“ aj u tých, ktorí pôvodne hlad necítili.
+
+## Sociálne normy a tlak
+
+Spoločenské udalosti sa často točia okolo jedla a odmietnuť sladké môže byť občas nepríjemné či izolujúce. Nátlak rovesníkov – úmyselný aj neúmyselný – formuje naše vzorce konzumácie. Naučiť sa tieto situácie zvládať asertívne a slušne je kľúčom k udržaniu záväzku bez odcudzenia okolia. Behaviorálny výskum naznačuje, že ľudia sú trikrát náchylnejší konzumovať sladké, keď tak robia ďalší v skupine. Štúdie tiež ukazujú, že rozvoj konkrétnych sociálnych stratégií – napríklad pripravené odpovede na ponuky jedla alebo navrhovanie alternatívnych aktivít – výrazne zvyšuje úspešnosť udržania zmien v sociálnom prostredí.
+
+## Marketing a dostupnosť
+
+Sme neustále bombardovaní reklamou na sladké produkty, ktoré sa tak javia ako normálna a žiaduca súčasť každodenného života. Ich široká dostupnosť v obchodoch, kaviarňach a automatoch ďalej normalizuje vysokú konzumáciu. Rozpoznanie týchto všadeprítomných marketingových taktík pomáha oslabiť ich vplyv na tvoje voľby. Marketingový výskum odhalil, že priemerný človek je denne vystavený viac než stovke cukrom podmienených reklám naprieč médiami. Navyše bolo preukázané, že strategické umiestnenie produktov v obchode môže zvýšiť impulzívne nákupy sladkostí až o 30%, čo podčiarkuje význam vedomého nakupovania.
+
+## Záver
+
+Aj keď nemôžeš ovládať každý externý faktor, *môžeš* upraviť svoje bezprostredné prostredie. Zásob si domácnosť a pracovisko zdravými možnosťami, plánuj dopredu na spoločenské akcie a buď vnímavý voči marketingu. Proaktívne formovanie okolia podporuje tvoju cestu preč od spracovaného cukru. Výskum ukázal, že ľudia, ktorí aktívne znižujú vystavenie cukru vo svojom prostredí, majú dvojnásobnú šancu udržať si dlhodobé zmeny. Psychologické štúdie navyše naznačujú, že podporné fyzické prostredie výrazne znižuje „únavu z rozhodovania“ a posilňuje vôľu pri udržiavaní zdravých návykov. 

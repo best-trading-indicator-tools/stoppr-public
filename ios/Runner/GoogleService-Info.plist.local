@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- REPLACE: Your Google OAuth Client ID (from Firebase Console) -->
+	<!-- Get from: Firebase Console → Your Project → Project Settings → Your iOS App → OAuth clients -->
+	<!-- Format: YOUR_CLIENT_ID.apps.googleusercontent.com -->
+	<key>CLIENT_ID</key>
+	<string>YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com</string>
+	
+	<!-- REPLACE: Reversed Client ID (same as CLIENT_ID but reversed) -->
+	<!-- Format: com.googleusercontent.apps.YOUR_CLIENT_ID -->
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.YOUR_GOOGLE_CLIENT_ID</string>
+	
+	<!-- REPLACE: Firebase API Key (from Firebase Console) -->
+	<!-- Get from: Firebase Console → Your Project → Project Settings → Your iOS App → API Key -->
+	<!-- Format: AIzaSy... -->
+	<key>API_KEY</key>
+	<string>YOUR_FIREBASE_API_KEY</string>
+	
+	<!-- REPLACE: Firebase GCM Sender ID (from Firebase Console) -->
+	<!-- Get from: Firebase Console → Your Project → Project Settings → Cloud Messaging → Sender ID -->
+	<!-- This is usually your Firebase Project Number -->
+	<key>GCM_SENDER_ID</key>
+	<string>YOUR_GCM_SENDER_ID</string>
+	
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	
+	<!-- REPLACE: Your app's bundle identifier -->
+	<!-- Should match: Xcode → Runner target → General → Bundle Identifier -->
+	<key>BUNDLE_ID</key>
+	<string>com.stoppr.app</string>
+	
+	<!-- REPLACE: Your Firebase Project ID -->
+	<!-- Get from: Firebase Console → Project Settings → General → Project ID -->
+	<key>PROJECT_ID</key>
+	<string>YOUR_FIREBASE_PROJECT_ID</string>
+	
+	<!-- REPLACE: Your Firebase Storage Bucket -->
+	<!-- Get from: Firebase Console → Project Settings → General → Storage Bucket -->
+	<!-- Format: YOUR_PROJECT_ID.firebasestorage.app -->
+	<key>STORAGE_BUCKET</key>
+	<string>YOUR_FIREBASE_PROJECT_ID.firebasestorage.app</string>
+	
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	
+	<!-- REPLACE: Your Google App ID (from Firebase Console) -->
+	<!-- Get from: Firebase Console → Your Project → Project Settings → Your iOS App → App ID -->
+	<!-- Format: 1:PROJECT_NUMBER:ios:APP_ID -->
+	<key>GOOGLE_APP_ID</key>
+	<string>YOUR_GOOGLE_APP_ID</string>
+</dict>
+</plist>
+

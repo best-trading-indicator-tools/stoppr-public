@@ -1,0 +1,747 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:math';
+import 'dart:async';
+import 'home_screen.dart';
+import 'panic_button_screen.dart';
+import 'breathing_exercise_screen.dart';
+import '../../../../core/analytics/mixpanel_service.dart';
+import '../../../../core/navigation/page_transitions.dart';
+import 'main_scaffold.dart';
+
+class ThinkingRelapsingScreen extends StatefulWidget {
+  const ThinkingRelapsingScreen({super.key});
+
+  @override
+  State<ThinkingRelapsingScreen> createState() => _ThinkingRelapsingScreenState();
+}
+
+class _ThinkingRelapsingScreenState extends State<ThinkingRelapsingScreen> with SingleTickerProviderStateMixin {
+  // Lists of text variations
+  final List<String> _redTextVariations = [
+    "Sugar can cause emotional instability and lack of energy.",
+    "Consuming sugar elevates your risk of chronic diseases.",
+    "Sugar cravings are temporary, but health is forever.",
+    "Sugar feeds inflammation in your body and brain.",
+    "Giving in to sugar now creates stronger cravings later.",
+    "Sugar disrupts your gut microbiome and digestive health.",
+    "Sugar crashes make you feel worse than before eating it.",
+    "Your future self will thank you for saying no to sugar.",
+    "Sugar can accelerate aging and skin problems.",
+    "Sugar derails your progress and weakens your willpower.",
+    "Each sugar craving defeated makes you mentally stronger.",
+    "Sugar hides in processed foods and sabotages health goals.",
+    "Sugar addiction works like other harmful dependencies.",
+    "Sugar increases anxiety and worsens mood disorders.",
+    "Regular sugar consumption leads to insulin resistance.",
+    "Sugar temporarily numbs emotions without solving problems.",
+    "Sugar provides empty calories with no nutritional value.",
+    "Sugar can trigger brain fog and decreased mental clarity.",
+    "Sugar consumption is linked to poor sleep quality.",
+    "Breaking the sugar cycle requires strength you already have.",
+  ];
+
+  final List<String> _whiteTextVariations = [
+    "Resisting sugar empowers you to take control of your health.",
+    "Every time you say no to sugar, you're saying yes to health.",
+    "Your commitment to a sugar-free life gets stronger each day.",
+    "Natural foods provide sustainable energy without the crash.",
+    "The discomfort of withdrawal is temporary, the benefits last.",
+    "Your body is healing itself with each sugar-free day.",
+    "Moment by moment, you're rebuilding your relationship with food.",
+    "Clarity and energy improve the longer you avoid sugar.",
+    "Choosing health over momentary pleasure builds character.",
+    "Your taste buds will adjust and crave natural sweetness instead.",
+    "The freedom from sugar addiction is worth the challenge.",
+    "Every craving defeated is a victory for your future self.",
+    "You deserve the vitality that comes from a sugar-free lifestyle.",
+    "True satisfaction comes from nourishing your body properly.",
+    "Your health journey inspires others around you.",
+    "Mindful eating creates a positive relationship with food.",
+    "Each day sugar-free strengthens your mind-body connection.",
+    "You are stronger than any craving you face.",
+    "Breaking free from sugar allows you to taste life more fully.",
+    "The best version of yourself exists beyond sugar dependence.",
+  ];
+  
+  // List of tips to fight sugar cravings
+  final List<String> _tipVariations = [
+    "SUGAR CRAVINGS are the BIGGEST\nreason why people gain WEIGHT.\n\nFIGHT THEM OFF with:\n• Salt & electrolyte water\n• Pickle juice\n• Salt on the tongue\n• Lemon/lime/grapefruit juice\n• Gum: Use it for cravings from time to time\n\nWatch your sugar cravings VANISH.",
+    
+    "CRAVING SUGAR? Your body might be\nneeding MINERALS and HYDRATION.\n\nTRY THESE INSTEAD:\n• Drink 16oz of water with sea salt\n• Eat a savory protein snack\n• Take a 5-minute walk\n• Chew a piece of cinnamon gum\n• Brush your teeth\n\nCravings typically pass in 15 MINUTES.",
+    
+    "SUGAR ADDICTION works through\nthe same brain pathways as drugs.\n\nBREAK THE CYCLE with:\n• High-protein meals\n• Healthy fats like avocado\n• Chromium-rich foods (broccoli, grapes)\n• Cinnamon tea (regulates blood sugar)\n• 10 deep breaths when cravings hit\n\nEach CRAVING DEFEATED rewires your brain.",
+    
+    "When SUGAR CRAVINGS hit,\nyour blood sugar is likely UNSTABLE.\n\nSTABILIZE IT with:\n• Apple slices with almond butter\n• A handful of nuts with berries\n• Coconut oil in herbal tea\n• Fermented foods (kombucha, kimchi)\n• A hard-boiled egg\n\nSTEADY BLOOD SUGAR = STEADY MOOD.",
+    
+    "EMOTIONAL EATING often triggers\nSUGAR CRAVINGS and BINGES.\n\nINTERRUPT THE PATTERN:\n• Name the emotion you're feeling\n• Drink a cup of mint or ginger tea\n• Call a supportive friend\n• Do 20 jumping jacks\n• Write down why you're avoiding sugar\n\nPAUSE before you consume.",
+    
+    "TIRED ALL THE TIME? Sugar might\nbe DRAINING your energy reserves.\n\nBOOST ENERGY naturally:\n• Eat protein every 3-4 hours\n• Take a B-vitamin complex\n• Try a spoonful of MCT oil\n• Cold shower for 30 seconds\n• Green tea instead of sugar\n\nREAL ENERGY doesn't crash like sugar does.",
+    
+    "SUGAR WITHDRAWAL symptoms\npeak at 2-3 days and fade after a week.\n\nGET THROUGH IT with:\n• L-glutamine supplement\n• Extra magnesium (reduces cravings)\n• Bone broth with sea salt\n• Green vegetable juices\n• Distract with a favorite hobby\n\nIt gets EASIER every day you resist.",
+    
+    "Your GUT MICROBIOME changes when\nyou quit sugar, improving health dramatically.\n\nSUPPORT YOUR GUT:\n• Probiotic foods (yogurt, sauerkraut)\n• Prebiotic fiber (onions, garlic, bananas)\n• Apple cider vinegar in water\n• Limit artificial sweeteners\n• Drink chamomile tea\n\nHEALTHY GUT = FEWER CRAVINGS.",
+    
+    "HUNGER isn't always what drives\nSUGAR CRAVINGS. Often it's HABIT.\n\nCHANGE YOUR ROUTINES:\n• Rearrange your kitchen\n• Take a different route past temptations\n• Create a new after-meal ritual\n• Drink sparkling water with lime\n• Keep hands busy with a stress ball\n\nNEW HABITS CREATE NEW OUTCOMES.",
+    
+    "STRESS HORMONES trigger\nSUGAR CRAVINGS intensely.\n\nLOWER STRESS with:\n• 4-7-8 breathing: inhale for 4, hold 7, exhale 8\n• Progressive muscle relaxation\n• Lavender essential oil\n• 5-minute meditation\n• 30-second cold exposure\n\nCALM MIND = CONTROLLED CRAVINGS.",
+    
+    "POOR SLEEP makes sugar cravings\n300% STRONGER the next day.\n\nOPTIMIZE SLEEP with:\n• Blackout curtains\n• No screens 1 hour before bed\n• Magnesium glycinate supplement\n• Consistent sleep/wake times\n• Bedroom temperature at 65-68°F\n\nQUALITY SLEEP is your anti-craving superpower.",
+    
+    "SWEET TOOTH acting up?\nYour taste buds can be RETRAINED.\n\nADJUST YOUR PALATE with:\n• Cinnamon, vanilla, and nutmeg\n• Roasted sweet vegetables\n• Fresh berries (lowest sugar fruits)\n• Dark chocolate (85%+ cacao)\n• Herbal teas with sweet notes\n\nAfter 2 WEEKS, fruit will taste like candy.",
+    
+    "NUTRIENT DEFICIENCIES often\nmasquerade as SUGAR CRAVINGS.\n\nREPLENISH with:\n• Zinc (oysters, pumpkin seeds)\n• Chromium (broccoli, grapes)\n• Magnesium (dark leafy greens)\n• B vitamins (meat, eggs, nutritional yeast)\n• Vitamin D (sunshine, fatty fish)\n\nFEED YOUR BODY what it ACTUALLY needs.",
+    
+    "DOPAMINE HITS from sugar keep you\ncoming back for more like an addiction.\n\nFIND HEALTHIER DOPAMINE SOURCES:\n• 10 minutes of exercise\n• Cold shower\n• Listen to favorite music\n• Accomplish a small task\n• Spend time in nature\n\nNATURAL REWARDS are more SUSTAINABLE.",
+    
+    "DEHYDRATION mimics hunger and\nincreases SUGAR CRAVINGS dramatically.\n\nHYDRATE STRATEGICALLY:\n• Start day with 16oz water\n• Add electrolytes (sodium, potassium)\n• Drink before meals\n• Herbal teas throughout day\n• Eat water-rich vegetables\n\n75% of Americans are CHRONICALLY DEHYDRATED.",
+    
+    "The FIRST 5 SECONDS of a craving\nare when willpower can win.\n\nCRAVING EMERGENCY KIT:\n• Keep sugar-free gum handy\n• Text a accountability partner\n• Do 10 pushups or jumping jacks\n• Keep a lemon wedge to bite\n• Visualize your health goals\n\nDELAY for 15 minutes and it will PASS.",
+    
+    "INSULIN RESISTANCE develops from\nchronic sugar consumption.\n\nRESET YOUR METABOLISM:\n• Apple cider vinegar before meals\n• 12-hour overnight fast\n• Cinnamon in coffee or tea\n• Short high-intensity workouts\n• Berberine supplement (nature's metformin)\n\nINCREASED SENSITIVITY = REDUCED CRAVINGS.",
+    
+    "Your BRAIN uses 25% of your energy\nbut GLUCOSE ISN'T ITS ONLY FUEL.\n\nSUPPORT BRAIN HEALTH with:\n• Healthy fats like MCT oil\n• Omega-3 rich foods (salmon, walnuts)\n• Lion's mane mushroom\n• Alpha-GPC or choline\n• Regular cardiovascular exercise\n\nA WELL-FED BRAIN doesn't crave sugar.",
+    
+    "SOCIAL ENVIRONMENTS trigger\n87% of diet RELAPSES.\n\nSTRATEGIES FOR SOCIAL SETTINGS:\n• Eat protein before events\n• Bring a sugar-free dish to share\n• Hold a sparkling water with lime\n• Have a prepared response for offers\n• Partner with a sugar-free friend\n\nPREPARATION makes social pressure MANAGEABLE.",
+    
+    "MINDLESS EATING accounts for\nmost sugar consumption.\n\nPRACTICE MINDFULNESS with:\n• Eat without screens\n• Chew each bite 20 times\n• Set a timer for 20 minutes per meal\n• Use smaller plates\n• Ask: 'Am I actually hungry?'\n\nAWARENESS is the first step to CHANGE."
+  ];
+
+  // Randomly selected texts
+  late String _selectedRedText;
+  late String _selectedWhiteText;
+  late String _selectedTip;
+  
+  // Current tip index for manual cycling
+  late int _currentTipIndex;
+  
+  // Countdown timer variables
+  bool _isCountdownActive = false;
+  int _remainingSeconds = 300; // 5 minutes
+  Timer? _countdownTimer;
+  late AnimationController _progressController;
+  
+  // PageController for tip swiping
+  final PageController _tipPageController = PageController();
+
+  @override
+  void initState() {
+    super.initState();
+    
+    // Create animation controller for the progress indicator
+    _progressController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 300), // 5 minutes
+    );
+    
+    // Randomly select texts
+    final random = Random();
+    _selectedRedText = _redTextVariations[random.nextInt(_redTextVariations.length)];
+    _selectedWhiteText = _whiteTextVariations[random.nextInt(_whiteTextVariations.length)];
+    _currentTipIndex = random.nextInt(_tipVariations.length);
+    _selectedTip = _tipVariations[_currentTipIndex];
+    
+    // Track page view with Mixpanel
+    MixpanelService.trackPageView('Thinking Relapsing Screen');
+    
+    // Auto-start the timer
+    _startCountdownTimer();
+    
+    // Force status bar icons to white mode with explicit settings
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.light,
+      statusBarBrightness: Brightness.dark, // iOS uses opposite naming
+      systemNavigationBarColor: Colors.transparent,
+      systemNavigationBarIconBrightness: Brightness.light,
+      systemNavigationBarDividerColor: Colors.transparent,
+    ));
+    
+    // Make app fullscreen and immersive
+    SystemChrome.setEnabledSystemUIMode(
+      SystemUiMode.edgeToEdge,
+      overlays: [SystemUiOverlay.top],
+    );
+  }
+
+  @override
+  void dispose() {
+    // Cleanup timers and controllers
+    _countdownTimer?.cancel();
+    _progressController.dispose();
+    _tipPageController.dispose();
+    
+    // Restore default status bar
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.light,
+      statusBarBrightness: Brightness.dark,
+    ));
+    SystemChrome.setEnabledSystemUIMode(
+      SystemUiMode.edgeToEdge,
+      overlays: [SystemUiOverlay.top, SystemUiOverlay.bottom],
+    );
+    super.dispose();
+  }
+
+  // Method to cycle to the next tip
+  void _cycleToNextTip() {
+    setState(() {
+      _currentTipIndex = (_currentTipIndex + 1) % _tipVariations.length;
+      _selectedTip = _tipVariations[_currentTipIndex];
+    });
+  }
+  
+  // Method to cycle to the previous tip
+  void _cycleToPreviousTip() {
+    setState(() {
+      _currentTipIndex = (_currentTipIndex - 1 + _tipVariations.length) % _tipVariations.length;
+      _selectedTip = _tipVariations[_currentTipIndex];
+    });
+  }
+  
+  // Toggle countdown timer
+  void _toggleCountdownTimer() {
+    if (_isCountdownActive) {
+      _stopCountdownTimer();
+    } else {
+      _startCountdownTimer();
+    }
+  }
+  
+  // Start the countdown timer
+  void _startCountdownTimer() {
+    setState(() {
+      _isCountdownActive = true;
+      _remainingSeconds = 300; // Reset to 5 minutes
+    });
+    
+    _progressController.reset();
+    _progressController.forward();
+    
+    _countdownTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      setState(() {
+        if (_remainingSeconds > 0) {
+          _remainingSeconds--;
+        } else {
+          _stopCountdownTimer();
+        }
+      });
+    });
+  }
+  
+  // Stop the countdown timer
+  void _stopCountdownTimer() {
+    _countdownTimer?.cancel();
+    _progressController.stop();
+    
+    setState(() {
+      _isCountdownActive = false;
+    });
+  }
+  
+  // Format seconds to mm:ss
+  String _formatDuration(int seconds) {
+    final minutes = seconds ~/ 60;
+    final remainingSeconds = seconds % 60;
+    return '$minutes:${remainingSeconds.toString().padLeft(2, '0')}';
+  }
+
+  void _startBreathingExercise() async {
+    // Reset temptation status before navigating
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('is_tempted', false);
+    
+    Navigator.of(context).pushReplacement(
+      BottomToTopPageRoute(
+        child: const BreathingExerciseScreen(),
+        settings: const RouteSettings(name: '/breathing_exercise'),
+      ),
+    );
+  }
+
+  void _openChat() async {
+    final Uri url = Uri.parse('https://t.me/+SKqx1P0D3iljZGRh');
+    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Could not open Telegram group'),
+            backgroundColor: Colors.red,
+          ),
+        );
+      }
+    }
+  }
+
+  // Method to open medical information URL
+  Future<void> _openMedicalInfo() async {
+    // Track button tap with Mixpanel
+    MixpanelService.trackButtonTap('Help & Info', screenName: 'Thinking of Relapsing Screen');
+    
+    final Uri url = Uri.parse('https://elevenlife.notion.site/Stoppr-1c3456d8905e80029856d5373ee08dfb?pvs=4');
+    try {
+      if (await canLaunchUrl(url)) {
+        await launchUrl(
+          url,
+          mode: LaunchMode.inAppWebView,
+        );
+      } else {
+        debugPrint('Could not launch help & info URL');
+      }
+    } catch (e) {
+      debugPrint('Error launching help & info URL: $e');
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // Calculate bottom padding to ensure content isn't hidden behind buttons
+    final bottomButtonsHeight = 140.0 + MediaQuery.of(context).padding.bottom;
+    
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.light,
+        statusBarBrightness: Brightness.dark,
+        systemNavigationBarColor: Colors.transparent,
+        systemNavigationBarIconBrightness: Brightness.light,
+        systemNavigationBarDividerColor: Colors.transparent,
+      ),
+      child: Scaffold(
+        backgroundColor: const Color(0xFF140120), // Using the dark purple from the pledge screen
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back, color: Colors.white),
+            onPressed: () async {
+              // Reset temptation status before navigating back
+              final prefs = await SharedPreferences.getInstance();
+              await prefs.setBool('is_tempted', false);
+              
+              Navigator.of(context).pushReplacement(
+                TopToBottomPageRoute(
+                  child: const MainScaffold(initialIndex: 0),
+                  settings: const RouteSettings(name: '/home'),
+                ),
+              );
+            },
+          ),
+          title: const Text(
+            "Don't Relapse",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 24,
+              fontFamily: 'ElzaRound',
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          centerTitle: true,
+          actions: [
+            // Help & Info icon
+            IconButton(
+              icon: const Icon(
+                Icons.help_outline,
+                color: Colors.white,
+                size: 28,
+              ),
+              onPressed: _openMedicalInfo,
+              tooltip: 'Help & Information',
+            ),
+          ],
+          systemOverlayStyle: const SystemUiOverlayStyle(
+            statusBarColor: Colors.transparent,
+            statusBarIconBrightness: Brightness.light,
+            statusBarBrightness: Brightness.dark,
+          ),
+        ),
+        body: SafeArea(
+          child: Stack(
+            children: [
+              // Scrollable content
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                child: SingleChildScrollView(
+                  physics: const BouncingScrollPhysics(),
+                  padding: EdgeInsets.only(bottom: bottomButtonsHeight),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      const SizedBox(height: 20),
+                      // First message with randomly selected red text
+                      Text(
+                        _selectedRedText,
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          color: Color(0xFFFF3B30),
+                          fontSize: 30,
+                          fontFamily: 'ElzaRound',
+                          fontWeight: FontWeight.w700,
+                          height: 1.2,
+                        ),
+                      ),
+                      const SizedBox(height: 40),
+                      
+                      // Countdown Timer Section
+                      Container(
+                        padding: const EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF2A1539),
+                          borderRadius: BorderRadius.circular(16),
+                          border: Border.all(
+                            color: Colors.white.withOpacity(0.2),
+                            width: 1,
+                          ),
+                        ),
+                        child: Column(
+                          children: [
+                            Text(
+                              "Craving Timer: ${_formatDuration(_remainingSeconds)}",
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontFamily: 'ElzaRound',
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            const SizedBox(height: 8),
+                            Text(
+                              "Hang in there! Most cravings pass in 5 minutes",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white.withOpacity(0.8),
+                                fontSize: 14,
+                                fontFamily: 'ElzaRound',
+                              ),
+                            ),
+                            
+                            const SizedBox(height: 16),
+                            // Progress bar visualization
+                            Container(
+                              height: 16,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                                color: Colors.white.withOpacity(0.1),
+                              ),
+                              child: AnimatedBuilder(
+                                animation: _progressController,
+                                builder: (context, child) {
+                                  return FractionallySizedBox(
+                                    alignment: Alignment.centerLeft,
+                                    widthFactor: 1 - (_progressController.value),
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(8),
+                                        gradient: const LinearGradient(
+                                          colors: [Color(0xFFFF3B30), Color(0xFFFFA500)],
+                                        ),
+                                      ),
+                                    ),
+                                  );
+                                },
+                              ),
+                            ),
+                            
+                            const SizedBox(height: 16),
+                            
+                            // Craving intensity visualization
+                            Container(
+                              height: 70,
+                              padding: const EdgeInsets.symmetric(vertical: 8),
+                              child: AnimatedBuilder(
+                                animation: _progressController,
+                                builder: (context, child) {
+                                  return CustomPaint(
+                                    size: const Size(double.infinity, 60),
+                                    painter: CravingIntensityPainter(
+                                      progress: _progressController.value,
+                                    ),
+                                  );
+                                },
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      
+                      const SizedBox(height: 40),
+                      
+                      // Tips navigation header
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          // Left arrow
+                          IconButton(
+                            onPressed: _cycleToPreviousTip,
+                            icon: Icon(
+                              Icons.arrow_back_ios,
+                              color: Colors.white.withOpacity(0.7),
+                              size: 20,
+                            ),
+                          ),
+                          
+                          // Tips title
+                          Text(
+                            "TIP ${_currentTipIndex + 1}/${_tipVariations.length}",
+                            style: TextStyle(
+                              color: Colors.white.withOpacity(0.8),
+                              fontSize: 16,
+                              fontFamily: 'ElzaRound',
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                          
+                          // Right arrow
+                          IconButton(
+                            onPressed: _cycleToNextTip,
+                            icon: Icon(
+                              Icons.arrow_forward_ios,
+                              color: Colors.white.withOpacity(0.7),
+                              size: 20,
+                            ),
+                          ),
+                        ],
+                      ),
+                      
+                      // Tips section with swipeable PageView
+                      GestureDetector(
+                        onHorizontalDragEnd: (details) {
+                          if (details.primaryVelocity! > 0) {
+                            // Swipe right - go to previous tip
+                            _cycleToPreviousTip();
+                          } else if (details.primaryVelocity! < 0) {
+                            // Swipe left - go to next tip
+                            _cycleToNextTip();
+                          }
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            border: Border.all(
+                              color: Colors.white.withOpacity(0.2),
+                              width: 1,
+                            ),
+                          ),
+                          child: Text(
+                            _selectedTip,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontFamily: 'ElzaRound',
+                              fontWeight: FontWeight.w500,
+                              height: 1.4,
+                            ),
+                          ),
+                        ),
+                      ),
+                      
+                      const SizedBox(height: 40),
+                    ],
+                  ),
+                ),
+              ),
+              
+              // Bottom buttons - fixed at bottom
+              Positioned(
+                left: 0,
+                right: 0,
+                bottom: 0,
+                child: Container(
+                  padding: EdgeInsets.only(
+                    left: 24,
+                    right: 24,
+                    //top: 0,
+
+                    bottom: 10 ,
+                  ),
+                  decoration: const BoxDecoration(
+                    color: Color(0xFF140120), // Solid color instead of gradient
+                  ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      // Chat button
+                      ElevatedButton(
+                        onPressed: _openChat,
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          foregroundColor: Colors.black,
+                          minimumSize: const Size(double.infinity, 38),
+                          padding: const EdgeInsets.symmetric(vertical: 0),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: const [
+                            Icon(Icons.chat_bubble_outline, size: 20),
+                            SizedBox(width: 8),
+                            Text(
+                              "Talk in Chat",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontFamily: 'ElzaRound',
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 6),
+                      // Text button for breathing exercise
+                      GestureDetector(
+                        onTap: _startBreathingExercise,
+                        child: const Padding(
+                          padding: EdgeInsets.symmetric(vertical: 2.0),
+                          child: Text(
+                            "or Start Breathing Exercise",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontFamily: 'ElzaRound',
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 2),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// Custom painter for visualizing craving intensity over time
+class CravingIntensityPainter extends CustomPainter {
+  final double progress;
+  
+  CravingIntensityPainter({required this.progress});
+  
+  @override
+  void paint(Canvas canvas, Size size) {
+    final width = size.width;
+    final height = size.height;
+    
+    // Paint for the line
+    final linePaint = Paint()
+      ..color = Colors.white.withOpacity(0.7)
+      ..strokeWidth = 2
+      ..style = PaintingStyle.stroke;
+    
+    // Paint for the area under the curve
+    final areaPaint = Paint()
+      ..shader = LinearGradient(
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        colors: [
+          const Color(0xFFFF3B30).withOpacity(0.5),
+          const Color(0xFFFF3B30).withOpacity(0.1),
+        ],
+      ).createShader(Rect.fromLTWH(0, 0, width, height))
+      ..style = PaintingStyle.fill;
+    
+    // Create a path for the curve
+    final path = Path();
+    
+    // Starting point at the bottom left
+    path.moveTo(0, height);
+    
+    // Create a curved descending line (representing diminishing craving intensity)
+    for (int i = 0; i <= width; i++) {
+      final x = i.toDouble();
+      final normalizedX = x / width;
+      
+      // Adjust curve based on progress
+      // At start (progress=0), curve is highest
+      // At end (progress=1), curve is lowest
+      final factor = progress; // 0 to 1
+      
+      // Create a curved shape that starts high and diminishes
+      // Using a combination of cubic and exponential functions for natural look
+      final heightFactor = (1 - normalizedX) * (1 - 0.5 * factor);
+      final y = height - (height * heightFactor * (1 - 0.3 * sin(normalizedX * 3)));
+      
+      path.lineTo(x, y);
+    }
+    
+    // Complete the path back to starting point
+    path.lineTo(width, height);
+    path.close();
+    
+    // Draw the filled area
+    canvas.drawPath(path, areaPaint);
+    
+    // Create a path for just the line at the top of the area
+    final linePath = Path();
+    linePath.moveTo(0, height * (1 - (1 - 0.5 * progress) * (1 - 0.3 * sin(0))));
+    
+    for (int i = 1; i <= width; i++) {
+      final x = i.toDouble();
+      final normalizedX = x / width;
+      final heightFactor = (1 - normalizedX) * (1 - 0.5 * progress);
+      final y = height - (height * heightFactor * (1 - 0.3 * sin(normalizedX * 3)));
+      
+      linePath.lineTo(x, y);
+    }
+    
+    // Draw the line
+    canvas.drawPath(linePath, linePaint);
+    
+    // Draw labels for understanding the graph with improved visibility
+    const textStyle = TextStyle(
+      color: Colors.white,
+      fontSize: 12,
+      fontWeight: FontWeight.bold,
+      shadows: [
+        Shadow(
+          offset: Offset(1.0, 1.0),
+          blurRadius: 3.0,
+          color: Color.fromARGB(150, 0, 0, 0),
+        ),
+      ],
+    );
+    
+    // Intensity label on left - positioned higher for better visibility
+    final intensitySpan = TextSpan(
+      text: 'Intensity',
+      style: textStyle,
+    );
+    final intensityPainter = TextPainter(
+      text: intensitySpan,
+      textDirection: TextDirection.ltr,
+    );
+    intensityPainter.layout();
+    intensityPainter.paint(canvas, const Offset(10, -15));
+    
+    // Time label on bottom right - positioned higher for better visibility
+    final timeSpan = TextSpan(
+      text: 'Time',
+      style: textStyle,
+    );
+    final timePainter = TextPainter(
+      text: timeSpan,
+      textDirection: TextDirection.ltr,
+    );
+    timePainter.layout();
+    timePainter.paint(canvas, Offset(width - timePainter.width - 10, height - timePainter.height - 10));
+  }
+  
+  @override
+  bool shouldRepaint(covariant CravingIntensityPainter oldDelegate) {
+    return oldDelegate.progress != progress;
+  }
+} 

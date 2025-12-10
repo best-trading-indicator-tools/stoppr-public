@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Standard iOS app configuration - keep as is -->
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Stoppr</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>stoppr</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(FLUTTER_BUILD_NAME)</string>
+	<key>CFBundleSignature</key>
+	<string>STPR</string>
+	
+	<!-- URL Schemes - Update with your app's bundle IDs and OAuth client IDs -->
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.stoppr.app</string>
+				<string>com.app.stoppr</string>
+				<string>signinwithapple</string>
+				<!-- REPLACE: Your Google OAuth Client ID (from Google Cloud Console) -->
+				<string>com.googleusercontent.apps.YOUR_GOOGLE_CLIENT_ID</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>runner</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>stoppr</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>stoppr</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<!-- REPLACE: Your Facebook App ID (from Facebook Developers) -->
+			<key>CFBundleURLName</key>
+			<string>fbYOUR_FACEBOOK_APP_ID</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fbYOUR_FACEBOOK_APP_ID</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	
+	<!-- REPLACE: Your Google OAuth Client ID (from Google Cloud Console) -->
+	<!-- Format: YOUR_CLIENT_ID.apps.googleusercontent.com -->
+	<key>GIDClientID</key>
+	<string>YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com</string>
+	
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	
+	<!-- Permission descriptions - customize as needed -->
+	<key>NSCameraUsageDescription</key>
+	<string>We need camera access to let you take photos of your meals for tracking.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need your location to find healthy food options near you.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need photo library access to let you choose photos of your meals for tracking.</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>Allow us to track your journey so we can understand which campaign brought you to STOPPR. This helps us reach more people who want to quit sugar and feel better. More users mean more motivation, shared progress, and better tools for you. Opt in to support our growth and join the movement to live clear, energized, and sugar-free!</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>We need microphone access to allow voice chat with Jarvis</string>
+	<key>NSContactsUsageDescription</key>
+	<string>We need access to contacts so you can send your streak widget to friends for accountability.</string>
+	<key>NSUserNotificationsUsageDescription</key>
+	<string>Enabling notifications increase by 63% your chances to resist your sugar cravings. Notifications may include alerts, sounds, and icon badges. These can be configured in Settings.</string>
+	<key>NSUserNotificationUsageDescription</key>
+	<string>Enabling notifications increase by 63% your chances to resist your sugar cravings. Notifications may include alerts, sounds, and icon badges. These can be configured in Settings.</string>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
+	
+	<!-- Associated domains - Update with your app's domains -->
+	<key>com.apple.developer.associated-domains</key>
+	<array>
+		<string>applinks:stoppr.app</string>
+		<string>applinks:stoppr.onelink.me</string>
+	</array>
+	
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>en</string>
+		<string>es</string>
+		<string>pt</string>
+		<string>zh</string>
+		<string>it</string>
+		<string>ru</string>
+	</array>
+	
+	<!-- REPLACE: Your AppsFlyer Dev Key (from AppsFlyer Dashboard) -->
+	<!-- Get from: https://hq1.appsflyer.com/ → Your App → Settings → App Settings -->
+	<key>AppsFlyerDevKey</key>
+	<string>YOUR_APPSFLYER_DEV_KEY</string>
+	
+	<!-- REPLACE: Your AppsFlyer App ID (from AppsFlyer Dashboard) -->
+	<!-- Get from: https://hq1.appsflyer.com/ → Your App → Settings → App Settings -->
+	<key>AppsFlyerAppId</key>
+	<string>YOUR_APPSFLYER_APP_ID</string>
+	
+	<!-- REPLACE: Your Facebook App ID (from Facebook Developers) -->
+	<!-- Get from: https://developers.facebook.com/ → Your App → Settings → Basic -->
+	<key>FacebookAppID</key>
+	<string>YOUR_FACEBOOK_APP_ID</string>
+	
+	<!-- REPLACE: Your Facebook Client Token (from Facebook Developers) -->
+	<!-- Get from: https://developers.facebook.com/ → Your App → Settings → Advanced → Security → Client Token -->
+	<!-- This is SENSITIVE - keep it secret -->
+	<key>FacebookClientToken</key>
+	<string>YOUR_FACEBOOK_CLIENT_TOKEN</string>
+	
+	<key>FacebookDisplayName</key>
+	<string>Stoppr</string>
+</dict>
+</plist>
+

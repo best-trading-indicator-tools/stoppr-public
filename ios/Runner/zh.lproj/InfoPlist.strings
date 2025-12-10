@@ -1,0 +1,10 @@
+"NSUserTrackingUsageDescription" = "请允许我们追踪你的使用历程，以了解是哪个推广活动让你来到 STOPPR。这有助于我们触达更多想戒糖、想感觉更好的人。更多用户意味着更多动力、共同进步，以及为你提供更好的工具。开启权限以支持我们的成长，加入清晰、有活力、无糖的生活运动！";
+
+"NSCameraUsageDescription" = "我们使用相机，方便你拍摄餐食照片用于记录。";
+"NSLocationWhenInUseUsageDescription" = "我们使用你的定位来寻找附近的健康选择。";
+"NSPhotoLibraryUsageDescription" = "我们使用照片库，方便你选择餐食照片。";
+"NSMicrophoneUsageDescription" = "我们使用麦克风以启用与 Melinda 的语音聊天。";
+"NSContactsUsageDescription" = "我们访问联系人，方便你把连胜小组件分享给好友。";
+"NSUserNotificationsUsageDescription" = "启用通知可将你抵抗对糖渴望的机会提升 63%。通知可能包含提醒、声音和应用图标角标。你可以在“设置”中进行配置。";
+"NSUserNotificationUsageDescription" = "启用通知可将你抵抗对糖渴望的机会提升 63%。通知可能包含提醒、声音和应用图标角标。你可以在“设置”中进行配置。";
+

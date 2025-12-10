@@ -1,0 +1,236 @@
+1
+00:00:00,600 --> 00:00:02,132
+Hey, willkommen zurück.
+
+2
+00:00:02,382 --> 00:00:03,682
+Schön, dich kennenzulernen.
+
+3
+00:00:04,083 --> 00:00:05,186
+Du machst weiter.
+
+4
+00:00:05,336 --> 00:00:06,590
+Das sagt viel aus.
+
+5
+00:00:06,740 --> 00:00:09,341
+Das ist keine leichte Arbeit, aber du bist dabei.
+
+6
+00:00:09,491 --> 00:00:10,698
+Das zählt.
+
+7
+00:00:10,948 --> 00:00:13,270
+Ich bin Cassandra, deine heutige Coachin.
+
+8
+00:00:13,420 --> 00:00:16,346
+Und die heutige Stoppr-Lektion ist eine aus dem echten Leben.
+
+9
+00:00:16,496 --> 00:00:18,307
+Eine, die du wahrscheinlich schon erlebt hast.
+
+10
+00:00:18,557 --> 00:00:20,322
+Lass uns über Gruppenzwang sprechen.
+
+11
+00:00:20,472 --> 00:00:21,447
+Und Zucker.
+
+12
+00:00:21,836 --> 00:00:22,858
+Du bist bei einem Abendessen.
+
+13
+00:00:23,008 --> 00:00:24,494
+Vielleicht mit Freunden.
+
+14
+00:00:24,644 --> 00:00:25,898
+Vielleicht mit der Familie.
+
+15
+00:00:26,048 --> 00:00:29,159
+Das Essen ist vorbei, und dann—da kommt es.
+
+16
+00:00:29,409 --> 00:00:30,570
+Ein riesiges Dessert.
+
+17
+00:00:29,409 --> 00:00:30,570
+Ein riesiges Dessert.
+
+18
+00:00:30,720 --> 00:00:32,299
+Direkt in die Mitte gestellt.
+
+19
+00:00:32,449 --> 00:00:33,796
+Alle lächeln.
+
+20
+00:00:33,946 --> 00:00:36,036
+Alle sagen: "Nimm doch nur ein kleines Stück!"
+
+21
+00:00:36,286 --> 00:00:37,818
+Und jetzt ist es unangenehm.
+
+22
+00:00:38,068 --> 00:00:39,833
+Du wolltest heute Abend keinen Zucker.
+
+23
+00:00:39,983 --> 00:00:41,423
+Du hast es dir selbst versprochen.
+
+24
+00:00:41,573 --> 00:00:43,245
+Aber jetzt ist es vor dir.
+
+25
+00:00:43,395 --> 00:00:45,438
+Und auch die Menschen, die dir wichtig sind.
+
+26
+00:00:45,688 --> 00:00:47,824
+Nein zu sagen fühlt sich plötzlich unhöflich an.
+
+27
+00:00:47,974 --> 00:00:48,857
+Oder seltsam.
+
+28
+00:00:49,007 --> 00:00:51,282
+Oder als ob du derjenige bist, der ein Drama macht.
+
+29
+00:00:51,532 --> 00:00:53,808
+Dies ist einer der schwierigsten Momente.
+
+30
+00:00:53,958 --> 00:00:57,023
+Nicht, weil du keinen Willen hast – sondern weil du nicht...
+
+31
+00:00:57,023 --> 00:00:58,555
+niemanden enttäuschen möchtest.
+
+32
+00:00:58,705 --> 00:01:00,191
+Du möchtest es nicht erklären.
+
+33
+00:00:58,705 --> 00:01:00,191
+Du möchtest es nicht erklären.
+
+34
+00:01:00,341 --> 00:01:02,060
+Du möchtest nicht auffallen.
+
+35
+00:01:02,310 --> 00:01:04,817
+Zucker in diesen Momenten geht es nicht um den Geschmack.
+
+36
+00:01:04,967 --> 00:01:06,407
+Es geht darum, dazuzugehören.
+
+37
+00:01:06,657 --> 00:01:07,632
+Du isst es.
+
+38
+00:01:07,782 --> 00:01:11,544
+Nicht, weil du es willst – sondern weil es einfacher ist, als nein zu sagen.
+
+39
+00:01:11,794 --> 00:01:14,534
+Und danach fühlst du dich vielleicht ein wenig unwohl.
+
+40
+00:01:14,684 --> 00:01:15,659
+Körperlich.
+
+41
+00:01:15,809 --> 00:01:16,738
+Emotional.
+
+42
+00:01:16,888 --> 00:01:18,885
+Als ob du dein eigenes Versprechen gebrochen hättest.
+
+43
+00:01:19,135 --> 00:01:22,478
+Aber hier ist die Wahrheit: Diese Momente werden passieren.
+
+44
+00:01:22,628 --> 00:01:24,207
+Und sie machen dich nicht schwach.
+
+45
+00:01:24,457 --> 00:01:25,897
+Sie machen dich menschlich.
+
+46
+00:01:26,147 --> 00:01:28,190
+Der erste Schritt ist, es zu bemerken.
+
+47
+00:01:28,340 --> 00:01:29,316
+Es zu benennen.
+
+48
+00:01:29,466 --> 00:01:31,323
+Es geht nicht nur um Zucker.
+
+49
+00:01:29,466 --> 00:01:31,323
+Es geht nicht nur um Zucker.
+
+50
+00:01:31,473 --> 00:01:33,238
+Es geht um sozialen Druck.
+
+51
+00:01:33,388 --> 00:01:34,456
+Das ist echt.
+
+52
+00:01:34,606 --> 00:01:35,813
+Das ist kraftvoll.
+
+53
+00:01:36,063 --> 00:01:38,200
+Du kannst nicht immer den Raum kontrollieren.
+
+54
+00:01:38,350 --> 00:01:40,486
+Aber du kannst dein Bewusstsein kontrollieren.
+
+55
+00:01:40,736 --> 00:01:44,126
+Und mit der Zeit, mit Übung, wirst du deine Worte finden.
+
+56
+00:01:44,276 --> 00:01:46,505
+Deine kleinen Wege, um dir treu zu bleiben.
+
+57
+00:01:46,755 --> 00:01:49,402
+Auch wenn der Nachtisch dir ins Gesicht starrt.
+
+58
+00:01:49,803 --> 00:01:50,813
+Du schaffst das.
+
+59
+00:01:51,063 --> 00:01:52,642
+Wir sehen uns in der nächsten Lektion.
+

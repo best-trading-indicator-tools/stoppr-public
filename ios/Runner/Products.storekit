@@ -1,0 +1,370 @@
+{
+  "appPolicies" : {
+    "eula" : "https://www.stoppr.app/terms-conditions",
+    "policies" : [
+      {
+        "locale" : "en_US",
+        "policyText" : "By using STOPPR, you agree to our Terms of Use and Privacy Policy. Auto-renewable subscriptions provide access to premium features including unlimited panic button usage, daily check-ins, progress tracking, and personalized content. Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period.",
+        "policyURL" : "https://www.stoppr.app/privacy-policy"
+      }
+    ]
+  },
+  "identifier" : "FD477AC2",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "79.99",
+      "familyShareable" : false,
+      "internalID" : "lifetime_purchase",
+      "localizations" : [
+        {
+          "description" : "STOPPR Lifetime Access: One-time purchase for lifetime access to all premium features including unlimited panic button, daily check-ins, progress tracking, personalized content, community features, and AI coaching. Pay once, use forever.",
+          "displayName" : "Lifetime Access",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.stoppr.lifetime",
+      "referenceName" : "Lifetime Access",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+    "_failTransactionsEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : {
+          "index" : 1,
+          "type" : "purchase"
+        },
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : {
+          "index" : 3,
+          "type" : "generic"
+        },
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "20240512",
+      "localizations" : [
+        {
+          "description" : "STOPPR Premium Subscriptions",
+          "displayName" : "STOPPR Premium",
+          "locale" : "en_US"
+        }
+      ],
+      "name" : "STOPPR Subscriptions",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "14.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "monthly_sub",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "STOPPR Premium Monthly: Unlimited access to panic button for cravings, daily check-in tracking, progress monitoring, personalized content, community features, and AI coaching. Automatically renews every month for $14.99 unless canceled 24+ hours before renewal.",
+              "displayName" : "Monthly Subscription",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.stoppr.app.monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Monthly Subscription",
+          "subscriptionGroupID" : "20240512",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "49.99",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "annual_sub",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "STOPPR Premium Annual: 12 months of unlimited access to panic button for cravings, daily check-in tracking, progress monitoring, personalized content, community features, and AI coaching. Automatically renews yearly for $49.99 unless canceled 24+ hours before renewal. Save 75% vs monthly.",
+              "displayName" : "Annual Subscription",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.stoppr.app.annual",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Annual Subscription",
+          "subscriptionGroupID" : "20240512",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "49.99",
+          "familyShareable" : false,
+          "groupNumber" : 3,
+          "internalID" : "annual_trial_sub",
+          "introductoryOffer" : {
+            "displayPrice" : "0.00",
+            "introductoryOfferType" : "FreeTrial",
+            "subscriptionPeriod" : "P3D"
+          },
+          "localizations" : [
+            {
+              "description" : "STOPPR Premium Annual with Trial: 3-day free trial, then 12 months of unlimited access to panic button for cravings, daily check-in tracking, progress monitoring, personalized content, community features, and AI coaching. Free for 3 days, then $49.99/year. Automatically renews unless canceled 24+ hours before renewal.",
+              "displayName" : "Annual Subscription with Trial",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.stoppr.app.annual.trial",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Annual Subscription with Trial",
+          "subscriptionGroupID" : "20240512",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "19.99",
+          "familyShareable" : false,
+          "groupNumber" : 4,
+          "internalID" : "annual_80off_sub",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "STOPPR Premium Annual (80% OFF): 12 months of unlimited access to panic button for cravings, daily check-in tracking, progress monitoring, personalized content, community features, and AI coaching. Special promotional price of $19.99 for first year, then $49.99/year. Automatically renews unless canceled 24+ hours before renewal.",
+              "displayName" : "Annual Subscription 80% OFF",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.stoppr.app.annual80OFF",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Annual Subscription 80% OFF",
+          "subscriptionGroupID" : "20240512",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "1.99",
+          "familyShareable" : false,
+          "groupNumber" : 5,
+          "internalID" : "weekly_cheap_sub",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "STOPPR Premium Weekly (Youth): 1 week of unlimited access to panic button for cravings, daily check-in tracking, progress monitoring, personalized content, community features, and AI coaching. Special youth pricing for users under 24. Automatically renews weekly unless canceled 24+ hours before renewal.",
+              "displayName" : "Weekly Subscription (Youth)",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.stoppr.weekly_cheap.app",
+          "recurringSubscriptionPeriod" : "P1W",
+          "referenceName" : "Weekly Subscription Cheap",
+          "subscriptionGroupID" : "20240512",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "7.99",
+          "familyShareable" : false,
+          "groupNumber" : 6,
+          "internalID" : "monthly_cheap_sub",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "STOPPR Premium Monthly (Youth): 1 month of unlimited access to panic button for cravings, daily check-in tracking, progress monitoring, personalized content, community features, and AI coaching. Special youth pricing for users under 24. Automatically renews monthly unless canceled 24+ hours before renewal.",
+              "displayName" : "Monthly Subscription (Youth)",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.stoppr.monthly_cheap.app",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Monthly Subscription Cheap",
+          "subscriptionGroupID" : "20240512",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "29.99",
+          "familyShareable" : false,
+          "groupNumber" : 7,
+          "internalID" : "annual_cheap_sub",
+          "introductoryOffer" : {
+            "displayPrice" : "0.00",
+            "introductoryOfferType" : "FreeTrial",
+            "subscriptionPeriod" : "P3D"
+          },
+          "localizations" : [
+            {
+              "description" : "STOPPR Premium Annual (Youth): 3-day free trial, then 12 months of unlimited access to panic button for cravings, daily check-in tracking, progress monitoring, personalized content, community features, and AI coaching. Special youth pricing for users under 24. Free for 3 days, then $29.99/year. Automatically renews yearly unless canceled 24+ hours before renewal.",
+              "displayName" : "Annual Subscription (Youth)",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.stoppr.annual_cheap.app",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Annual Subscription Cheap",
+          "subscriptionGroupID" : "20240512",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "69.90",
+          "familyShareable" : false,
+          "groupNumber" : 8,
+          "internalID" : "annual_exp1_sub",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "STOPPR Premium Annual Expensive 1: 12 months of unlimited access to panic button for cravings, daily check-in tracking, progress monitoring, personalized content, community features, and AI coaching. Automatically renews yearly for $69.90 unless canceled 24+ hours before renewal.",
+              "displayName" : "Annual Subscription Expensive 1",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.stoppr.app.annual.exp1",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Annual Subscription Expensive 1",
+          "subscriptionGroupID" : "20240512",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "89.90",
+          "familyShareable" : false,
+          "groupNumber" : 9,
+          "internalID" : "annual_exp2_sub",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "STOPPR Premium Annual Expensive 2: 12 months of unlimited access to panic button for cravings, daily check-in tracking, progress monitoring, personalized content, community features, and AI coaching. Automatically renews yearly for $89.90 unless canceled 24+ hours before renewal.",
+              "displayName" : "Annual Expensive 2",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.stoppr.app.annual.exp2",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Annual Expensive 2",
+          "subscriptionGroupID" : "20240512",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}

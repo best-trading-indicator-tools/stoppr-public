@@ -1,0 +1,16 @@
+"widget_sugarFreeSince" = "Senza zucchero da:"; 
+"panic_button_label" = "Pulsante\npanico";
+"quick_meditation_label" = "Meditazione\nRapida";
+"widget_subscribeToTrackStreak" = "Abbonati per tracciare la tua serie";
+"pledge_widget_label" = "Impegno\nQuotidiano";
+"widget_hours_abbrev" = "h";
+"widget_minutes_abbrev" = "min";
+"pledge_widget_display_name" = "Impegno Quotidiano";
+"pledge_widget_description_ios" = "Apri rapidamente l'Impegno Quotidiano.";
+"streak_widget_display_name" = "Serie Stoppr";
+"streak_widget_description_ios" = "Traccia la tua serie senza zucchero.";
+"quick_meditation_display_name" = "Meditazione Rapida";
+"quick_meditation_description_ios" = "Apri Meditazione Rapida.";
+"panic_widget_display_name" = "Pulsante Panico";
+"panic_widget_description_ios" = "Apri rapidamente il Pulsante Panico.";
+

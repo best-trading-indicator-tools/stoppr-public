@@ -1,0 +1,10 @@
+export 'detected_food_slide.dart';
+export 'alternative_info_slide.dart';
+export 'nutritional_comparison_slide.dart';
+export 'glycemic_index_slide.dart';
+export 'blood_sugar_impact_slide.dart';
+export 'meal_timing_slide.dart';
+export 'benefits_slide.dart';
+export 'scientific_sources_slide.dart';
+export 'recipe_slide.dart';
+export 'bloating_effect_slide.dart'; 

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@drawable/widget_brand_gradient_background">
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_panic_button"
+        android:tint="@color/widget_on_brand"
+        android:layout_marginBottom="@dimen/widget_icon_to_label_spacing"
+        android:contentDescription="@null"
+        android:importantForAccessibility="no" />
+
+    <TextView
+        android:id="@+id/tv_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/elza_round_bold"
+        android:text="@string/panic_button_label"
+        android:textColor="#FFFFFFFF"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:singleLine="false" />
+
+</LinearLayout>
+
+

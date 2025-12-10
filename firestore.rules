@@ -1,0 +1,314 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // === USER DOCUMENTS === 
+    match /users/{userId} {
+      // Only authenticated users can read profiles (protects emails and personal data)
+      allow read: if request.auth != null;
+      // Only authenticated users can write to their own documents
+      allow write: if request.auth != null && request.auth.uid == userId;
+      
+      // === USER SUBCOLLECTIONS ===
+      match /onboarding/{document=**} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+      
+      match /pledges/{document=**} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+      
+      match /progress/{document=**} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+      
+      match /blocked_users/{document=**} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+      
+      // === NUTRITION SUBCOLLECTIONS ===
+      match /food_logs/{document=**} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+      
+      // Allow workout logs create/read/update/delete for the authenticated user
+      match /workout_logs/{document=**} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+      
+      match /daily_summaries/{document=**} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+      
+      match /nutrition_profile/{document=**} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+
+      // === FASTING SUBCOLLECTION ===
+      match /fasts/{document=**} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+
+      // === RECIPE FAVORITES SUBCOLLECTION ===
+      match /favorite_recipes/{document=**} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+
+      // === BODY METRICS (weight, height) ===
+      match /body_metrics/{docId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+
+        match /weight_entries/{entryId} {
+          allow read, write: if request.auth != null && request.auth.uid == userId;
+        }
+      }
+      
+      match /challenges/{challengeId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+        
+        match /tasks/{document=**} {
+          allow read, write: if request.auth != null && request.auth.uid == userId;
+        }
+      }
+    }
+    
+    // === COMMUNITY POSTS ===
+    match /community_posts/{postId} {
+      allow read: if true;
+      allow create: if (request.auth != null && request.resource.data.authorId == request.auth.uid) ||
+                      (request.resource.data.authorId is string && 
+                       request.resource.data.authorId.matches('^anon_.*'));
+      allow update: if (request.auth != null && (
+        // Author can update anything
+        request.auth.uid == resource.data.authorId ||
+        // Any authenticated user can update upvote fields and commentCount
+        (request.resource.data.diff(resource.data).affectedKeys().hasOnly(['upvotes', 'upvotedBy', 'commentCount']))
+      )) ||
+      // Anonymous users can only update upvote fields
+      (request.resource.data.diff(resource.data).affectedKeys().hasOnly(['upvotes', 'upvotedBy']));
+      allow delete: if request.auth != null && request.auth.uid == resource.data.authorId;
+      
+      match /comments/{commentId} {
+        allow read: if true;
+        allow create: if (request.auth != null && request.resource.data.authorId == request.auth.uid) || 
+                        (request.resource.data.authorId is string && 
+                         request.resource.data.authorId.matches('^anon_.*'));
+        allow update, delete: if request.auth != null && request.auth.uid == resource.data.authorId;
+        // Note: Anonymous users cannot update or delete their comments
+      }
+    }
+    
+    // === OFFICIAL CHAT (Legacy - now English) ===
+    match /official_chat/{messageId} {
+      allow read: if true;
+      // Allow authenticated users OR anonymous users with anon_* pattern
+      allow create: if (request.auth != null && request.resource.data.userId == request.auth.uid) ||
+                      (request.resource.data.userId is string && 
+                       request.resource.data.userId.matches('^anon_.*'));
+      // Only authenticated users can delete their own messages
+      allow delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+    
+    // === LANGUAGE-SPECIFIC CHATS ===
+    // English Chat
+    match /official_chat_en/{messageId} {
+      allow read: if true;
+      allow create: if (request.auth != null && request.resource.data.userId == request.auth.uid) ||
+                      (request.resource.data.userId is string && 
+                       request.resource.data.userId.matches('^anon_.*'));
+      allow delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+    
+    // Spanish Chat
+    match /official_chat_es/{messageId} {
+      allow read: if true;
+      allow create: if (request.auth != null && request.resource.data.userId == request.auth.uid) ||
+                      (request.resource.data.userId is string && 
+                       request.resource.data.userId.matches('^anon_.*'));
+      allow delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+    
+    // German Chat
+    match /official_chat_de/{messageId} {
+      allow read: if true;
+      allow create: if (request.auth != null && request.resource.data.userId == request.auth.uid) ||
+                      (request.resource.data.userId is string && 
+                       request.resource.data.userId.matches('^anon_.*'));
+      allow delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+    
+    // Chinese Chat
+    match /official_chat_zh/{messageId} {
+      allow read: if true;
+      allow create: if (request.auth != null && request.resource.data.userId == request.auth.uid) ||
+                      (request.resource.data.userId is string && 
+                       request.resource.data.userId.matches('^anon_.*'));
+      allow delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+    
+    // Russian Chat
+    match /official_chat_ru/{messageId} {
+      allow read: if true;
+      allow create: if (request.auth != null && request.resource.data.userId == request.auth.uid) ||
+                      (request.resource.data.userId is string && 
+                       request.resource.data.userId.matches('^anon_.*'));
+      allow delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+    
+    // French Chat
+    match /official_chat_fr/{messageId} {
+      allow read: if true;
+      allow create: if (request.auth != null && request.resource.data.userId == request.auth.uid) ||
+                      (request.resource.data.userId is string && 
+                       request.resource.data.userId.matches('^anon_.*'));
+      allow delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+    
+    // Slovak Chat
+    match /official_chat_sk/{messageId} {
+      allow read: if true;
+      allow create: if (request.auth != null && request.resource.data.userId == request.auth.uid) ||
+                      (request.resource.data.userId is string && 
+                       request.resource.data.userId.matches('^anon_.*'));
+      allow delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+    
+    // Czech Chat
+    match /official_chat_cs/{messageId} {
+      allow read: if true;
+      allow create: if (request.auth != null && request.resource.data.userId == request.auth.uid) ||
+                      (request.resource.data.userId is string && 
+                       request.resource.data.userId.matches('^anon_.*'));
+      allow delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+    
+    // Italian Chat
+    match /official_chat_it/{messageId} {
+      allow read: if true;
+      allow create: if (request.auth != null && request.resource.data.userId == request.auth.uid) ||
+                      (request.resource.data.userId is string && 
+                       request.resource.data.userId.matches('^anon_.*'));
+      allow delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+    
+    // Polish Chat
+    match /official_chat_pl/{messageId} {
+      allow read: if true;
+      allow create: if (request.auth != null && request.resource.data.userId == request.auth.uid) ||
+                      (request.resource.data.userId is string && 
+                       request.resource.data.userId.matches('^anon_.*'));
+      allow delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+    
+    // === ROOT-LEVEL COMMENTS (for leaderboard) ===
+    match /comments/{commentId} {
+      allow read: if true;
+      // Allow authenticated users OR anonymous users with anon_* pattern
+      allow write: if (request.auth != null && request.auth.uid == request.resource.data.authorId) ||
+                     (request.resource.data.authorId is string && 
+                      request.resource.data.authorId.matches('^anon_.*'));
+    }
+    
+    // === SYSTEM COLLECTIONS ===
+    match /influencers/{document} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null; // Allow authenticated users
+    }
+    
+    match /security_alerts/{document} {
+      allow read: if false; // Admin only
+      allow write: if request.auth != null; // Allow authenticated users to write
+    }
+    
+    match /unsubscribe_feedback/{document} {
+      allow read: if false; // Admin only
+      // Allow authenticated users OR strictly-validated anonymous creates
+      allow create: if (request.auth != null) || (
+        request.resource.data.keys().hasOnly([
+          'userId', 'reason', 'reasonCategory', 'timestamp', 'email'
+        ]) &&
+        request.resource.data.userId is string &&
+        request.resource.data.reason is string &&
+        request.resource.data.reasonCategory is string &&
+        request.resource.data.timestamp is timestamp &&
+        request.resource.data.email is string
+      );
+      allow update, delete: if false; // Immutable feedback
+    }
+    
+    match /transactions_fail/{document} {
+      allow read: if false; // Admin only
+      // Allow authenticated users OR strictly-validated anonymous creates
+      allow create: if (request.auth != null) || (
+        request.resource.data.keys().hasOnly([
+          'uid', 'error', 'createdAt'
+        ]) &&
+        request.resource.data.uid is string &&
+        request.resource.data.error is string &&
+        request.resource.data.createdAt is timestamp
+      );
+      allow update, delete: if false; // Immutable logs
+    }
+    
+    // === MISSING COLLECTIONS FROM YOUR DATABASE ===
+    match /account_deletion_feedback/{document} {
+      allow read: if false; // Admin only
+      allow write: if request.auth != null; // Allow authenticated users to write
+    }
+    
+    match /articles/{document} {
+      allow read: if true; // Public reading
+      allow write: if false; // Admin SDK only
+    }
+    
+    match /processedReviews/{document} {
+      allow read, write: if false; // Admin SDK only
+    }
+    
+    match /sharing_tokens/{document} {
+      allow read, write: if request.auth != null; // Allow authenticated users
+    }
+    
+    match /user_feature_quotas/{document} {
+      allow read, write: if request.auth != null; // Allow authenticated users
+    }
+    
+    // === ACCOUNTABILITY PARTNERSHIPS ===
+    match /accountability_partnerships/{partnershipId} {
+      // Users can read partnerships where they are involved OR initiated by them
+      allow read: if request.auth != null && (
+        request.auth.uid == resource.data.user1Id || 
+        request.auth.uid == resource.data.user2Id ||
+        request.auth.uid == resource.data.initiatedBy
+      );
+      
+      // Users can create partnerships (send requests)
+      allow create: if request.auth != null && (
+        request.auth.uid == request.resource.data.initiatedBy ||
+        request.auth.uid == request.resource.data.user1Id ||
+        request.auth.uid == request.resource.data.user2Id
+      );
+      
+      // Users can update partnerships they're part of (accept/decline/end)
+      allow update: if request.auth != null && (
+        request.auth.uid == resource.data.user1Id || 
+        request.auth.uid == resource.data.user2Id
+      );
+      
+      // No deletion - only soft delete via status: "ended"
+      allow delete: if false;
+    }
+    
+    // === ACCOUNTABILITY POOL ===
+    match /accountability_pool/{userId} {
+      // Any authenticated user can read pool (for matching algorithm)
+      // Note: Only real users (with subscriptions) should be in pool
+      // Cloud Function will filter out sample/test users
+      allow read: if request.auth != null;
+      
+      // Users can only write their own pool entry
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+}
+

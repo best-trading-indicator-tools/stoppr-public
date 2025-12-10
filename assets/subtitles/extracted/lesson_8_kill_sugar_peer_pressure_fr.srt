@@ -1,0 +1,236 @@
+1
+00:00:00,600 --> 00:00:02,132
+Salut, bon retour parmi nous.
+
+2
+00:00:02,382 --> 00:00:03,682
+Heureux de te rencontrer.
+
+3
+00:00:04,083 --> 00:00:05,186
+Tu continues d'avancer.
+
+4
+00:00:05,336 --> 00:00:06,590
+Ça en dit long.
+
+5
+00:00:06,740 --> 00:00:09,341
+Ce n'est pas un travail facile, mais tu es là.
+
+6
+00:00:09,491 --> 00:00:10,698
+Ça compte.
+
+7
+00:00:10,948 --> 00:00:13,270
+Je suis Cassandra, ta coach pour aujourd'hui.
+
+8
+00:00:13,420 --> 00:00:16,346
+Et la leçon Stoppr d'aujourd'hui est une leçon de vie réelle.
+
+9
+00:00:16,496 --> 00:00:18,307
+Une que tu as probablement déjà vécue.
+
+10
+00:00:18,557 --> 00:00:20,322
+Parlons de la pression des pairs.
+
+11
+00:00:20,472 --> 00:00:21,447
+Et le sucre.
+
+12
+00:00:21,836 --> 00:00:22,858
+Vous êtes à un dîner.
+
+13
+00:00:23,008 --> 00:00:24,494
+Peut-être avec des amis.
+
+14
+00:00:24,644 --> 00:00:25,898
+Peut-être en famille.
+
+15
+00:00:26,048 --> 00:00:29,159
+Le repas est terminé, et puis—le voilà.
+
+16
+00:00:29,409 --> 00:00:30,570
+Un énorme dessert.
+
+17
+00:00:29,409 --> 00:00:30,570
+Un énorme dessert.
+
+18
+00:00:30,720 --> 00:00:32,299
+Placé juste au milieu.
+
+19
+00:00:32,449 --> 00:00:33,796
+Tout le monde sourit.
+
+20
+00:00:33,946 --> 00:00:36,036
+Tout le monde dit, "Prends juste un petit peu !"
+
+21
+00:00:36,286 --> 00:00:37,818
+Et maintenant, c'est gênant.
+
+22
+00:00:38,068 --> 00:00:39,833
+Tu ne voulais pas de sucre ce soir.
+
+23
+00:00:39,983 --> 00:00:41,423
+Tu t'étais promis.
+
+24
+00:00:41,573 --> 00:00:43,245
+Mais maintenant, c'est devant toi.
+
+25
+00:00:43,395 --> 00:00:45,438
+Et il y a aussi les personnes que tu aimes.
+
+26
+00:00:45,688 --> 00:00:47,824
+Dire non semble soudain impoli.
+
+27
+00:00:47,974 --> 00:00:48,857
+Ou bizarre.
+
+28
+00:00:49,007 --> 00:00:51,282
+Ou comme si c'était toi qui faisais des histoires.
+
+29
+00:00:51,532 --> 00:00:53,808
+C'est l'un des moments les plus difficiles.
+
+30
+00:00:53,958 --> 00:00:57,023
+Pas parce que tu n'as pas de volonté—mais parce que tu n'as pas
+
+31
+00:00:57,023 --> 00:00:58,555
+tu ne veux décevoir personne.
+
+32
+00:00:58,705 --> 00:01:00,191
+Tu ne veux pas expliquer.
+
+33
+00:00:58,705 --> 00:01:00,191
+Tu ne veux pas expliquer.
+
+34
+00:01:00,341 --> 00:01:02,060
+Tu ne veux pas te démarquer.
+
+35
+00:01:02,310 --> 00:01:04,817
+Le sucre dans ces moments-là n'est pas une question de goût.
+
+36
+00:01:04,967 --> 00:01:06,407
+C'est une question de s'intégrer.
+
+37
+00:01:06,657 --> 00:01:07,632
+Tu le manges.
+
+38
+00:01:07,782 --> 00:01:11,544
+Pas parce que tu en as envie—mais parce que c'est plus facile que de dire non.
+
+39
+00:01:11,794 --> 00:01:14,534
+Et après, peut-être que tu te sens un peu mal.
+
+40
+00:01:14,684 --> 00:01:15,659
+Physiquement.
+
+41
+00:01:15,809 --> 00:01:16,738
+Émotionnellement.
+
+42
+00:01:16,888 --> 00:01:18,885
+Comme si vous aviez rompu votre propre promesse.
+
+43
+00:01:19,135 --> 00:01:22,478
+Mais voici la vérité : ces moments arriveront.
+
+44
+00:01:22,628 --> 00:01:24,207
+Et ils ne vous rendent pas faible.
+
+45
+00:01:24,457 --> 00:01:25,897
+Ils vous rendent humain.
+
+46
+00:01:26,147 --> 00:01:28,190
+La première étape est de le remarquer.
+
+47
+00:01:28,340 --> 00:01:29,316
+Le nommer.
+
+48
+00:01:29,466 --> 00:01:31,323
+Ce n'est pas seulement une question de sucre.
+
+49
+00:01:29,466 --> 00:01:31,323
+Ce n'est pas seulement une question de sucre.
+
+50
+00:01:31,473 --> 00:01:33,238
+C'est une question de pression sociale.
+
+51
+00:01:33,388 --> 00:01:34,456
+C'est réel.
+
+52
+00:01:34,606 --> 00:01:35,813
+C'est puissant.
+
+53
+00:01:36,063 --> 00:01:38,200
+Vous ne pouvez pas toujours contrôler l'environnement.
+
+54
+00:01:38,350 --> 00:01:40,486
+Mais vous pouvez contrôler votre conscience.
+
+55
+00:01:40,736 --> 00:01:44,126
+Et avec le temps, avec de la pratique, vous trouverez vos mots.
+
+56
+00:01:44,276 --> 00:01:46,505
+Vos petites façons de rester fidèle à vous-même.
+
+57
+00:01:46,755 --> 00:01:49,402
+Même quand le dessert vous regarde droit dans les yeux.
+
+58
+00:01:49,803 --> 00:01:50,813
+Vous pouvez le faire.
+
+59
+00:01:51,063 --> 00:01:52,642
+À bientôt dans la prochaine leçon.
+

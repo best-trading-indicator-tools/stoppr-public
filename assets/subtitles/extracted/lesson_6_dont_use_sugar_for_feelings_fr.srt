@@ -1,0 +1,220 @@
+1
+00:00:00,600 --> 00:00:01,760
+Salut toi !
+
+2
+00:00:02,173 --> 00:00:03,264
+Tu es toujours là.
+
+3
+00:00:03,414 --> 00:00:04,761
+Ça en dit long.
+
+4
+00:00:04,911 --> 00:00:06,676
+Tu es curieux, engagé.
+
+5
+00:00:06,826 --> 00:00:07,940
+Tu veux du changement.
+
+6
+00:00:08,090 --> 00:00:09,391
+Et ça compte.
+
+7
+00:00:09,641 --> 00:00:12,520
+Je suis Alex, de retour avec toi pour une autre leçon de Stoppr.
+
+8
+00:00:12,770 --> 00:00:15,696
+Aujourd'hui, nous examinons un autre type de piège à sucre.
+
+9
+00:00:15,846 --> 00:00:17,053
+Piège numéro 4.
+
+10
+00:00:17,303 --> 00:00:19,254
+Manger du sucre pour gérer ses émotions.
+
+11
+00:00:19,504 --> 00:00:20,850
+Ce n'est pas une question de faim.
+
+12
+00:00:21,000 --> 00:00:22,254
+C'est une question de réconfort.
+
+13
+00:00:22,667 --> 00:00:23,619
+Tu es stressé(e).
+
+14
+00:00:23,769 --> 00:00:24,698
+Tu es triste.
+
+15
+00:00:24,848 --> 00:00:26,148
+Peut-être que tu t'ennuies simplement.
+
+16
+00:00:26,298 --> 00:00:27,598
+Et le sucre est juste là.
+
+17
+00:00:27,748 --> 00:00:28,491
+Sucré.
+
+18
+00:00:28,641 --> 00:00:29,291
+Rapide.
+
+19
+00:00:29,441 --> 00:00:29,999
+Facile.
+
+20
+00:00:30,249 --> 00:00:32,292
+Ça te donne ce soulagement rapide.
+
+21
+00:00:32,442 --> 00:00:34,578
+Un instant où tout semble plus léger.
+
+22
+00:00:34,728 --> 00:00:36,029
+Comme une petite évasion.
+
+23
+00:00:36,279 --> 00:00:38,043
+Mais ce sentiment s'estompe vite.
+
+24
+00:00:38,193 --> 00:00:39,308
+Et que reste-t-il ?
+
+25
+00:00:39,558 --> 00:00:40,301
+La culpabilité.
+
+26
+00:00:40,451 --> 00:00:41,240
+La fatigue.
+
+27
+00:00:41,390 --> 00:00:43,527
+Peut-être même plus de tristesse qu'avant.
+
+28
+00:00:43,777 --> 00:00:47,492
+Vous n'avez pas résolu le sentiment—vous l'avez juste repoussé un moment.
+
+29
+00:00:47,742 --> 00:00:50,342
+Avec le temps, le sucre devient votre raccourci.
+
+30
+00:00:50,492 --> 00:00:53,093
+Pas vers le bonheur, mais pour éviter les émotions.
+
+31
+00:00:53,243 --> 00:00:54,125
+Journée difficile ?
+
+32
+00:00:54,275 --> 00:00:54,879
+Grignotez.
+
+33
+00:00:55,029 --> 00:00:55,679
+Mauvaise nouvelle ?
+
+34
+00:00:55,829 --> 00:00:56,294
+Faites-vous plaisir.
+
+35
+00:00:56,444 --> 00:00:57,419
+Vous vous sentez déprimé ?
+
+36
+00:00:57,569 --> 00:00:58,405
+Chocolat.
+
+37
+00:00:58,655 --> 00:01:00,652
+Et c'est sournois, parce que ça marche...
+
+38
+00:00:58,655 --> 00:01:00,652
+Et c'est sournois, parce que ça marche...
+
+39
+00:01:00,802 --> 00:01:01,777
+pendant une minute.
+
+40
+00:01:02,027 --> 00:01:03,002
+Puis ça ne marche plus.
+
+41
+00:01:03,252 --> 00:01:05,017
+Le vrai problème est toujours là.
+
+42
+00:01:05,167 --> 00:01:07,907
+Et maintenant, il y en a un nouveau : vous êtes coincé dans une boucle.
+
+43
+00:01:08,057 --> 00:01:11,308
+Ressentir quelque chose, manger du sucre, s'effondrer, se sentir pire.
+
+44
+00:01:11,558 --> 00:01:14,658
+Vous commencez à craindre vos propres sentiments, car vous ne vous faites pas confiance
+
+45
+00:01:14,658 --> 00:01:16,713
+pour les gérer sans nourriture.
+
+46
+00:01:16,963 --> 00:01:18,309
+Ce n'est pas juste pour vous.
+
+47
+00:01:18,459 --> 00:01:19,945
+Vous méritez mieux que ça.
+
+48
+00:01:20,095 --> 00:01:23,671
+Vous méritez des outils qui aident vraiment, pas des astuces qui s'estompent.
+
+49
+00:01:23,921 --> 00:01:25,454
+Ce piège est puissant.
+
+50
+00:01:25,604 --> 00:01:27,043
+Mais l'appeler pour ce qu'il est ?
+
+51
+00:01:27,193 --> 00:01:29,283
+C'est le début de la libération.
+
+52
+00:01:29,533 --> 00:01:30,834
+Et vous venez de le faire.
+
+53
+00:01:29,533 --> 00:01:30,834
+Et vous venez de le faire.
+
+54
+00:01:31,084 --> 00:01:32,477
+À bientôt dans la prochaine leçon.
+
+55
+00:01:32,627 --> 00:01:33,695
+Vous faites du bon travail.
+

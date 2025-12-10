@@ -1,0 +1,236 @@
+1
+00:00:00,600 --> 00:00:02,132
+Hola, bienvenido de nuevo.
+
+2
+00:00:02,382 --> 00:00:03,682
+Encantado de conocerte.
+
+3
+00:00:04,083 --> 00:00:05,186
+Sigues adelante.
+
+4
+00:00:05,336 --> 00:00:06,590
+Eso dice mucho.
+
+5
+00:00:06,740 --> 00:00:09,341
+Esto no es un trabajo fácil, pero estás aquí.
+
+6
+00:00:09,491 --> 00:00:10,698
+Eso importa.
+
+7
+00:00:10,948 --> 00:00:13,270
+Soy Cassandra, tu entrenadora de hoy.
+
+8
+00:00:13,420 --> 00:00:16,346
+Y la lección de Stoppr de hoy es una de la vida real.
+
+9
+00:00:16,496 --> 00:00:18,307
+Una que probablemente has vivido.
+
+10
+00:00:18,557 --> 00:00:20,322
+Hablemos sobre la presión de grupo.
+
+11
+00:00:20,472 --> 00:00:21,447
+Y el azúcar.
+
+12
+00:00:21,836 --> 00:00:22,858
+Estás en una cena.
+
+13
+00:00:23,008 --> 00:00:24,494
+Quizás con amigos.
+
+14
+00:00:24,644 --> 00:00:25,898
+Quizás con la familia.
+
+15
+00:00:26,048 --> 00:00:29,159
+La comida ha terminado, y entonces—ahí viene.
+
+16
+00:00:29,409 --> 00:00:30,570
+Un postre gigante.
+
+17
+00:00:29,409 --> 00:00:30,570
+Un postre gigante.
+
+18
+00:00:30,720 --> 00:00:32,299
+Colocado justo en el medio.
+
+19
+00:00:32,449 --> 00:00:33,796
+Todos sonríen.
+
+20
+00:00:33,946 --> 00:00:36,036
+Todos dicen, "¡Solo prueba un poco!"
+
+21
+00:00:36,286 --> 00:00:37,818
+Y ahora es incómodo.
+
+22
+00:00:38,068 --> 00:00:39,833
+No querías azúcar esta noche.
+
+23
+00:00:39,983 --> 00:00:41,423
+Te lo prometiste a ti mismo.
+
+24
+00:00:41,573 --> 00:00:43,245
+Pero ahora está frente a ti.
+
+25
+00:00:43,395 --> 00:00:45,438
+Y también están las personas que te importan.
+
+26
+00:00:45,688 --> 00:00:47,824
+Decir que no de repente se siente grosero.
+
+27
+00:00:47,974 --> 00:00:48,857
+O raro.
+
+28
+00:00:49,007 --> 00:00:51,282
+O como si fueras tú quien está haciendo un escándalo.
+
+29
+00:00:51,532 --> 00:00:53,808
+Este es uno de los momentos más difíciles.
+
+30
+00:00:53,958 --> 00:00:57,023
+No porque no tengas fuerza de voluntad, sino porque no lo haces.
+
+31
+00:00:57,023 --> 00:00:58,555
+no quieres decepcionar a nadie.
+
+32
+00:00:58,705 --> 00:01:00,191
+No quieres explicar.
+
+33
+00:00:58,705 --> 00:01:00,191
+No quieres explicar.
+
+34
+00:01:00,341 --> 00:01:02,060
+No quieres destacar.
+
+35
+00:01:02,310 --> 00:01:04,817
+El azúcar en estos momentos no se trata del sabor.
+
+36
+00:01:04,967 --> 00:01:06,407
+Se trata de encajar.
+
+37
+00:01:06,657 --> 00:01:07,632
+Lo comes.
+
+38
+00:01:07,782 --> 00:01:11,544
+No porque quieras, sino porque es más fácil que decir no.
+
+39
+00:01:11,794 --> 00:01:14,534
+Y después, tal vez te sientes un poco raro.
+
+40
+00:01:14,684 --> 00:01:15,659
+Físicamente.
+
+41
+00:01:15,809 --> 00:01:16,738
+Emocionalmente.
+
+42
+00:01:16,888 --> 00:01:18,885
+Como si hubieras roto tu propia promesa.
+
+43
+00:01:19,135 --> 00:01:22,478
+Pero aquí está la verdad: estos momentos sucederán.
+
+44
+00:01:22,628 --> 00:01:24,207
+Y no te hacen débil.
+
+45
+00:01:24,457 --> 00:01:25,897
+Te hacen humano.
+
+46
+00:01:26,147 --> 00:01:28,190
+El primer paso es notarlo.
+
+47
+00:01:28,340 --> 00:01:29,316
+Nombrarlo.
+
+48
+00:01:29,466 --> 00:01:31,323
+No se trata solo del azúcar.
+
+49
+00:01:29,466 --> 00:01:31,323
+No se trata solo del azúcar.
+
+50
+00:01:31,473 --> 00:01:33,238
+Se trata de la presión social.
+
+51
+00:01:33,388 --> 00:01:34,456
+Eso es real.
+
+52
+00:01:34,606 --> 00:01:35,813
+Eso es poderoso.
+
+53
+00:01:36,063 --> 00:01:38,200
+No siempre puedes controlar la situación.
+
+54
+00:01:38,350 --> 00:01:40,486
+Pero puedes controlar tu conciencia.
+
+55
+00:01:40,736 --> 00:01:44,126
+Y con el tiempo, con práctica, encontrarás tus palabras.
+
+56
+00:01:44,276 --> 00:01:46,505
+Tus pequeñas maneras de ser fiel a ti mismo.
+
+57
+00:01:46,755 --> 00:01:49,402
+Incluso cuando el postre te está mirando de frente.
+
+58
+00:01:49,803 --> 00:01:50,813
+Tú puedes con esto.
+
+59
+00:01:51,063 --> 00:01:52,642
+Nos vemos en la próxima lección.
+

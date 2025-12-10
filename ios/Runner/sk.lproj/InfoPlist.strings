@@ -1,0 +1,11 @@
+"NSUserTrackingUsageDescription" = "Povoľ sledovanie tvojej cesty, aby sme pochopili, ktorá kampaň ťa priviedla do STOPPR. Pomôže nám to osloviť viac ľudí, ktorí chcú prestať s cukrom a cítiť sa lepšie. Viac používateľov znamená viac motivácie, zdieľaný pokrok a lepšie nástroje pre teba. Zapni povolenie, podpor náš rast a pridaj sa k hnutiu za jasný, energický život bez cukru!";
+
+"NSCameraUsageDescription" = "Používame fotoaparát, aby si mohol(a) odfotiť jedlá pre sledovanie.";
+"NSLocationWhenInUseUsageDescription" = "Používame tvoju polohu na hľadanie zdravých možností v okolí.";
+"NSPhotoLibraryUsageDescription" = "Používame knižnicu fotiek, aby si si vedel(a) vybrať fotky jedál.";
+"NSMicrophoneUsageDescription" = "Používame mikrofón na hlasový chat s Melindou.";
+"NSContactsUsageDescription" = "Pristupujeme ku kontaktom, aby si mohol(a) zdieľať svoj streak widget s priateľmi.";
+"NSUserNotificationsUsageDescription" = "Zapnutie upozornení zvyšuje tvoje šance odolať chuti na cukor o 63 %. Upozornenia môžu obsahovať hlásenia, zvuky a odznaky ikony. Toto môžeš nastaviť v Nastaveniach.";
+"NSUserNotificationUsageDescription" = "Zapnutie upozornení zvyšuje tvoje šance odolať chuti na cukor o 63 %. Upozornenia môžu obsahovať hlásenia, zvuky a odznaky ikony. Toto môžeš nastaviť v Nastaveniach.";
+
+

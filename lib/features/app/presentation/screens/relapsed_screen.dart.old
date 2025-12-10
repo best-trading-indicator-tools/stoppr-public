@@ -1,0 +1,418 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'dart:math';
+import '../../../../core/streak/streak_service.dart';
+import '../../../../core/relapse/relapse_service.dart';
+import 'home_screen.dart';
+import 'panic_button_screen.dart';
+import 'journal_feelings.dart';
+import 'add_journal_entry.dart';
+import '../../../../core/analytics/mixpanel_service.dart';
+import '../../../../core/navigation/page_transitions.dart';
+
+class RelapsedScreen extends StatefulWidget {
+  const RelapsedScreen({super.key});
+
+  @override
+  State<RelapsedScreen> createState() => _RelapsedScreenState();
+}
+
+class _RelapsedScreenState extends State<RelapsedScreen> {
+  final StreakService _streakService = StreakService();
+  
+  @override
+  void initState() {
+    super.initState();
+    
+    // Track page view with Mixpanel
+    MixpanelService.trackPageView('Relapsed Screen');
+    
+    // Force status bar icons to white mode with explicit settings
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.light,
+      statusBarBrightness: Brightness.dark, // iOS uses opposite naming
+      systemNavigationBarColor: Colors.transparent,
+      systemNavigationBarIconBrightness: Brightness.light,
+      systemNavigationBarDividerColor: Colors.transparent,
+    ));
+    
+    // Make app fullscreen and immersive
+    SystemChrome.setEnabledSystemUIMode(
+      SystemUiMode.edgeToEdge,
+      overlays: [SystemUiOverlay.top],
+    );
+  }
+
+  @override
+  void dispose() {
+    // Restore default status bar
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.light,
+      statusBarBrightness: Brightness.dark,
+    ));
+    SystemChrome.setEnabledSystemUIMode(
+      SystemUiMode.edgeToEdge,
+      overlays: [SystemUiOverlay.top, SystemUiOverlay.bottom],
+    );
+    super.dispose();
+  }
+  
+  void _resetCounter() async {
+    // Log the relapse
+    final relapseService = RelapseService();
+    await relapseService.logRelapse();
+    
+    // Reset the streak counter
+    await _streakService.resetStreakCounter();
+    
+    // Navigate back to home screen
+    if (mounted) {
+      Navigator.of(context).pushReplacement(
+        TopToBottomPageRoute(
+          child: const HomeScreen(),
+          settings: const RouteSettings(name: '/home'),
+        ),
+      );
+    }
+  }
+
+  void _navigateToJournalFeelings() {
+    Navigator.of(context).pushReplacement(
+      BottomToTopPageRoute(
+        child: const JournalFeelingsScreen(),
+        settings: const RouteSettings(name: '/journal_feelings'),
+      ),
+    );
+  }
+
+  // Method to open medical information URL
+  Future<void> _openMedicalInfo() async {
+    // Track button tap with Mixpanel
+    MixpanelService.trackButtonTap('Help & Info', screenName: 'Relapsed Screen');
+    
+    final Uri url = Uri.parse('https://elevenlife.notion.site/Stoppr-1c3456d8905e80029856d5373ee08dfb?pvs=4');
+    try {
+      if (await canLaunchUrl(url)) {
+        await launchUrl(
+          url,
+          mode: LaunchMode.inAppWebView,
+        );
+      } else {
+        debugPrint('Could not launch help & info URL');
+      }
+    } catch (e) {
+      debugPrint('Error launching help & info URL: $e');
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final bottomPadding = max(0.0, MediaQuery.of(context).padding.bottom - 20.0);
+    
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.light,
+        statusBarBrightness: Brightness.dark,
+        systemNavigationBarColor: Colors.transparent,
+        systemNavigationBarIconBrightness: Brightness.light,
+        systemNavigationBarDividerColor: Colors.transparent,
+      ),
+      child: Scaffold(
+        backgroundColor: const Color(0xFF140120), // Dark navy background
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back, color: Colors.white),
+            onPressed: () => Navigator.of(context).pushReplacement(
+              TopToBottomPageRoute(
+                child: const HomeScreen(),
+                settings: const RouteSettings(name: '/home'),
+              ),
+            ),
+          ),
+          title: const Text(
+            'Relapsed',
+            style: TextStyle(
+              color: Color(0xFFFF3B30),
+              fontSize: 20,
+              fontFamily: 'ElzaRound',
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          centerTitle: true,
+          actions: [
+            // Help & Info icon
+            IconButton(
+              icon: const Icon(
+                Icons.help_outline,
+                color: Colors.white,
+                size: 28,
+              ),
+              onPressed: _openMedicalInfo,
+              tooltip: 'Help & Information',
+            ),
+          ],
+          systemOverlayStyle: const SystemUiOverlayStyle(
+            statusBarColor: Colors.transparent,
+            statusBarIconBrightness: Brightness.light,
+            statusBarBrightness: Brightness.dark,
+          ),
+        ),
+        body: SafeArea(
+          child: Stack(
+            children: [
+              // Scrollable content
+              ListView(
+                padding: EdgeInsets.only(
+                  bottom: 100, // Add padding to prevent content from going behind sticky button
+                ),
+                children: [
+                  const SizedBox(height: 20),
+                  const Text(
+                    'You let yourself\ndown, again.',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 40,
+                      fontFamily: 'ElzaRound',
+                      fontWeight: FontWeight.w700,
+                      height: 1.2,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 44),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 30),
+                    child: Text(
+                      'Relapsing can be tough and make you feel awful, but it\'s crucial not to be too hard on yourself. Doing so can create a vicious cycle, as explained below.',
+                      style: TextStyle(
+                        color: Colors.white.withOpacity(0.7),
+                        fontSize: 16,
+                        fontFamily: 'ElzaRound',
+                        height: 1.5,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  const SizedBox(height: 32),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 15),
+                    child: Text(
+                      'Relapsing Cycle of Death',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontFamily: 'ElzaRound',
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 30),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF1A1A3A),
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    padding: const EdgeInsets.all(20),
+                    child: Column(
+                      children: [
+                        _buildCycleStep(
+                          icon: Icons.local_cafe,
+                          title: 'Sugar Rush',
+                          description: 'In the moment of consumption, you experience an intense pleasure and satisfaction.',
+                        ),
+                        const SizedBox(height: 20),
+                        _buildCycleStep(
+                          icon: Icons.battery_alert,
+                          title: 'Sugar Crash',
+                          description: 'Shortly after the initial high, your energy levels plummet, leaving you with fatigue, brain fog, and regret.',
+                        ),
+                        const SizedBox(height: 20),
+                        _buildCycleStep(
+                          icon: Icons.refresh,
+                          title: 'Craving Cycle',
+                          description: 'You reach for more sugar to alleviate the crash, perpetuating the cycle. If you don\'t break this pattern, it becomes increasingly difficult to stop.',
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 30),
+                    child: TextButton(
+                      onPressed: _navigateToJournalFeelings,
+                      style: TextButton.styleFrom(
+                        backgroundColor: const Color(0xFF1A1A3A),
+                        padding: const EdgeInsets.symmetric(vertical: 16),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: const [
+                            Icon(Icons.edit_note, color: Colors.white),
+                            SizedBox(width: 8),
+                            Text(
+                              'Journal Feelings',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontFamily: 'ElzaRound',
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            Spacer(),
+                            Icon(Icons.chevron_right, color: Colors.white),
+                            SizedBox(width: 8),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 56),
+                  const Text(
+                    'Your strength is proven in your ability to overcome addiction.',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 32,
+                      fontFamily: 'ElzaRound',
+                      fontWeight: FontWeight.w700,
+                      height: 1.2,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 40),
+                  Center(  // Wrap in Center to better control layout
+                    child: Text(
+                      'You got this, the STOPPR team believes in you 💙',
+                      style: TextStyle(
+                        color: Colors.blue.shade400,
+                        fontSize: 16,
+                        fontFamily: 'ElzaRound',
+                        height: 1.0,
+                        letterSpacing: -0.2,  // Slightly reduce letter spacing
+                        fontWeight: FontWeight.w500,
+                      ),
+                      textAlign: TextAlign.center,
+                      overflow: TextOverflow.visible,
+                    ),
+                  ),
+                  const SizedBox(height: 32),
+                ],
+              ),
+              
+              // Sticky Reset Counter button at bottom
+              Positioned(
+                bottom: 0,
+                left: 0,
+                right: 0,
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        const Color(0xFF0A0A1B).withOpacity(0.0),
+                        const Color(0xFF0A0A1B),
+                      ],
+                    ),
+                  ),
+                  padding: EdgeInsets.only(
+                    top: 0,
+                    left: 50,
+                    right: 50,
+                    bottom: bottomPadding,
+                  ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const SizedBox(height: 20), // Add margin space here
+                      ElevatedButton(
+                        onPressed: _resetCounter,
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFFFF3B30),
+                          foregroundColor: Colors.white,
+                          minimumSize: const Size(double.infinity, 44),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(25),
+                          ),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: const [
+                            Icon(Icons.refresh, size: 20),
+                            SizedBox(width: 8),
+                            Text(
+                              'Reset Counter',
+                              style: TextStyle(
+                                fontFamily: 'ElzaRound',
+                                fontWeight: FontWeight.w600,
+                                fontSize: 20,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildCycleStep({
+    required IconData icon,
+    required String title,
+    required String description,
+  }) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Icon(
+          icon,
+          color: Colors.white,
+          size: 24,
+        ),
+        const SizedBox(width: 16),
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                title,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                  fontFamily: 'ElzaRound',
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                description,
+                style: TextStyle(
+                  color: Colors.white.withOpacity(0.7),
+                  fontSize: 14,
+                  fontFamily: 'ElzaRound',
+                  height: 1.4,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+} 

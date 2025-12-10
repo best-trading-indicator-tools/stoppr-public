@@ -1,0 +1,23 @@
+"widget_sugarFreeSince" = "Zuckerfrei seit:";
+"panic_button_label" = "Panik-\nTaste";
+"quick_meditation_label" = "Kurze\nMeditation";
+"widget_subscribeToTrackStreak" = "Abonniere, um deine Serie zu verfolgen";
+"pledge_widget_label" = "Tägliches Gelübde";
+"widget_hours_abbrev" = "Std";
+"widget_minutes_abbrev" = "Min";
+"pledge_widget_display_name" = "Tägliches Gelübde";
+"pledge_widget_description_ios" = "Öffne das tägliche Gelübde schnell.";
+"streak_widget_display_name" = "Stoppr Serie";
+"streak_widget_description_ios" = "Verfolge deine zuckerfreie Serie.";
+"quick_meditation_display_name" = "Schnelle Meditation";
+"quick_meditation_description_ios" = "Schnell Meditation öffnen.";
+"panic_widget_display_name" = "Panik-Taste";
+"panic_widget_description_ios" = "Panik-Taste schnell öffnen.";
+"widget_accountability_title" = "Erholung";
+"widget_days_suffix" = "Tage";
+"accountability_widget_display_name" = "Verantwortungspartner";
+"accountability_widget_description" = "Verfolge deinen Genesungsfortschritt mit deinem Partner";
+"widget_accountability_no_partner_title" = "Finde deinen Partner";
+"widget_accountability_no_partner_subtitle" = "Verbinde dich mit jemandem, um gemeinsam Fortschritte zu verfolgen";
+"widget_days_count" = "%d Tag(e)";
+

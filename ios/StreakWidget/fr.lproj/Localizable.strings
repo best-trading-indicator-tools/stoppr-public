@@ -1,0 +1,23 @@
+"widget_sugarFreeSince" = "Sans sucre depuis :";
+"panic_button_label" = "Bouton\nde panique";
+"quick_meditation_label" = "Méditation\nRapide";
+"widget_subscribeToTrackStreak" = "Abonne-toi pour suivre ta série";
+"pledge_widget_label" = "Serment quotidien";
+"widget_hours_abbrev" = "h";
+"widget_minutes_abbrev" = "min";
+"pledge_widget_display_name" = "Serment quotidien";
+"pledge_widget_description_ios" = "Ouvre rapidement le Serment quotidien.";
+"streak_widget_display_name" = "Série Stoppr";
+"streak_widget_description_ios" = "Suis ta série sans sucre.";
+"quick_meditation_display_name" = "Méditation rapide";
+"quick_meditation_description_ios" = "Ouvre Méditation rapide.";
+"panic_widget_display_name" = "Bouton panique";
+"panic_widget_description_ios" = "Ouvre rapidement le Bouton panique.";
+"widget_accountability_title" = "Récupération";
+"widget_days_suffix" = "Jours";
+"accountability_widget_display_name" = "Partenaire de responsabilité";
+"accountability_widget_description" = "Suis tes progrès de récupération avec ton partenaire";
+"widget_accountability_no_partner_title" = "Trouve ton partenaire";
+"widget_accountability_no_partner_subtitle" = "Associe-toi avec quelqu'un pour suivre vos progrès ensemble";
+"widget_days_count" = "%d Jour(s)";
+

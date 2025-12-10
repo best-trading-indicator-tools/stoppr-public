@@ -1,0 +1,175 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+.dart_tool/
+.dart_tool 2/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins*
+.flutter-plugins-dependencies*
+.packages
+.pub-cache/
+.pub/
+/build/
+**/build/
+pubspec.lock
+
+# iOS related
+ios/build/
+ios/Podfile*.lock
+ios/Pods/
+ios/Pods/*
+ios/Pods*/
+ios/Runner/GeneratedPluginRegistrant.*
+ios/*.xcworkspace
+ios/*.xcodeproj/xcshareddata/
+ios/*.xcodeproj/xcuserdata/
+ios/*.xcodeproj/project.xcworkspace/
+ios/Flutter/flutter_export_environment.sh
+ios/Flutter/App.framework
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/.symlinks/
+ios/DerivedData/
+ios/Runner.xcworkspace/xcuserdata/
+ios/Runner.xcodeproj/xcuserdata/
+ios/Runner.xcodeproj/project.xcworkspace/xcuserdata/
+
+# Android related
+android/app/build/
+android/build/
+android/gradle/wrapper/
+# android/gradlew
+android/gradlew.bat
+android/local.properties
+android/.gradle
+android/captures/
+# android/key.properties
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Cursor rules
+.cursorrules
+
+# Environment variables
+.env
+
+# iOS configuration files with private information
+# Note: .local template files ARE committed, but actual files are ignored
+ios/Runner/Info.plist
+ios/exportOptions.plist
+ios/firebase_app_id_file.json
+ios/Runner/GoogleService-Info.plist
+ios/Runner/Runner.entitlements
+
+# Android configuration files with private information
+# Note: .local template files ARE committed, but actual files are ignored
+android/app/google-services.json
+android/app/src/main/res/values/strings.xml
+android/app/src/main/res/values-*/strings.xml
+
+
+# App Store Connect credentials
+.env.appstore
+
+# Firebase service account keys (should never be committed)
+**/stoppr-*-firebase-adminsdk-*.json
+**/*-firebase-adminsdk-*.json
+
+# Apple Store Connect private keys
+**/*.p8
+
+# User data exports
+auth_export.json
+
+# Coverage reports
+coverage/
+lcov.info
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swn
+*.swo
+*~
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.firebase/
+firebase-debug.log
+
+# Generated files
+*.g.dart
+*.freezed.dart
+*.freezed.*.dart
+*.mocks.dart
+
+# Editor temporary files
+*.sublime-workspace
+*~
+*.save
+*.autosave
+*.lock
+
+# Firebase
+firebase.json
+tools/firebase_cloud/functions/node_modules/
+
+# Ignore all node_modules directories
+**/node_modules/
+
+# User management script dependencies
+/tools/user_management/node_modules/
+
+# Community Simulator node_modules
+tools/community_simulator/node_modules/
+
+# Node.js dependencies for tools
+/tools/learn_articles/node_modules/
+
+# Attack plans (internal development notes)
+attack-plans/
+
+# Tools directory (internal scripts and utilities)
+tools/
+
+# Sensitive files documentation (contains information about sensitive file locations)
+SENSITIVE_FILES.md
+

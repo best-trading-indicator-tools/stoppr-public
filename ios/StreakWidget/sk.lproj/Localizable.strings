@@ -1,0 +1,23 @@
+"widget_sugarFreeSince" = "Bez cukru od:";
+"panic_button_label" = "Tlačidlo\npaniky";
+"quick_meditation_label" = "Rýchla\nmeditácia";
+"widget_subscribeToTrackStreak" = "Predplať si, aby si sledoval svoju sériu";
+"pledge_widget_label" = "Denný sľub";
+"widget_hours_abbrev" = "h";
+"widget_minutes_abbrev" = "min";
+"pledge_widget_display_name" = "Denný sľub";
+"pledge_widget_description_ios" = "Rýchlo otvor Denný sľub.";
+"streak_widget_display_name" = "Séria Stoppr";
+"streak_widget_description_ios" = "Sleduj svoju bezcukrovú sériu.";
+"quick_meditation_display_name" = "Rýchla meditácia";
+"quick_meditation_description_ios" = "Otvor Rýchlu meditáciu.";
+"panic_widget_display_name" = "Tlačidlo paniky";
+"panic_widget_description_ios" = "Rýchlo otvor Tlačidlo paniky.";
+"widget_accountability_title" = "Zotavenie";
+"widget_days_suffix" = "Dni";
+"accountability_widget_display_name" = "Partner zodpovednosti";
+"accountability_widget_description" = "Sleduj svoj pokrok v zotavovaní so svojím partnerom";
+"widget_accountability_no_partner_title" = "Nájdi svojho partnera";
+"widget_accountability_no_partner_subtitle" = "Spár sa s niekým, aby ste sledovali pokrok spoločne";
+"widget_days_count" = "%d Deň/Dni";
+

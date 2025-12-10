@@ -1,0 +1,43 @@
+platform :ios, '15.0'
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+project 'Runner',
+        'Debug'   => :debug,
+        'Profile' => :release,
+        'Release' => :release
+
+def flutter_root
+  gen = File.expand_path('Flutter/Generated.xcconfig', __dir__)
+  raise "#{gen} missing; run `flutter pub get`" unless File.exist?(gen)
+  File.foreach(gen) { |l| return $1.strip if l =~ /FLUTTER_ROOT=(.*)/ }
+  raise 'FLUTTER_ROOT not found in Generated.xcconfig'
+end
+
+require File.expand_path('packages/flutter_tools/bin/podhelper', flutter_root)
+flutter_ios_podfile_setup
+
+use_frameworks! :linkage => :static
+use_modular_headers!
+
+target 'Runner' do
+  flutter_install_all_ios_pods(File.dirname(__FILE__))
+
+  target 'RunnerTests' do
+    inherit! :search_paths
+  end
+
+  # Ton widget n’a **pas** ses propres pods, il partage juste les headers de Runner
+  target 'StreakWidgetExtension' do
+    inherit! :search_paths
+  end
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |t|
+    # applique partout iOS 15 et settings Flutter
+    flutter_additional_ios_build_settings(t)
+    t.build_configurations.each do |cfg|
+      cfg.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
+    end
+  end
+end

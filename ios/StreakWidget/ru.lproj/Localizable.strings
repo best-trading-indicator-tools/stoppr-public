@@ -1,0 +1,23 @@
+"widget_sugarFreeSince" = "Без сахара с:";
+"panic_button_label" = "Кнопка\nпаники";
+"quick_meditation_label" = "Быстрая\nмедитация";
+"widget_subscribeToTrackStreak" = "Оформи подписку, чтобы отслеживать серию";
+"pledge_widget_label" = "Ежедневная клятва";
+"widget_hours_abbrev" = "ч";
+"widget_minutes_abbrev" = "м";
+"pledge_widget_display_name" = "Ежедневная клятва";
+"pledge_widget_description_ios" = "Быстрый доступ к ежедневной клятве.";
+"streak_widget_display_name" = "Серия Stoppr";
+"streak_widget_description_ios" = "Отслеживай свою серию без сахара.";
+"quick_meditation_display_name" = "Быстрая медитация";
+"quick_meditation_description_ios" = "Быстро открыть медитацию.";
+"panic_widget_display_name" = "Кнопка паники";
+"panic_widget_description_ios" = "Быстрый доступ к кнопке паники.";
+"widget_accountability_title" = "Восстановление";
+"widget_days_suffix" = "Дней";
+"accountability_widget_display_name" = "Партнёр по подотчётности";
+"accountability_widget_description" = "Отслеживай свой прогресс восстановления вместе со своим партнёром";
+"widget_accountability_no_partner_title" = "Найди своего партнёра";
+"widget_accountability_no_partner_subtitle" = "Объединись с кем-то, чтобы отслеживать прогресс вместе";
+"widget_days_count" = "%d Дн(ей)";
+

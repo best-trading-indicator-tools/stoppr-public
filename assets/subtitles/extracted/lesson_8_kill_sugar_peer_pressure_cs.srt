@@ -1,0 +1,236 @@
+1
+00:00:00,600 --> 00:00:02,132
+Ahoj, vítej zpět.
+
+2
+00:00:02,382 --> 00:00:03,682
+Rád tě poznávám.
+
+3
+00:00:04,083 --> 00:00:05,186
+Pořád pokračuješ.
+
+4
+00:00:05,336 --> 00:00:06,590
+To hodně vypovídá.
+
+5
+00:00:06,740 --> 00:00:09,341
+Není to snadná práce, ale ty se snažíš.
+
+6
+00:00:09,491 --> 00:00:10,698
+To je důležité.
+
+7
+00:00:10,948 --> 00:00:13,270
+Jsem Cassandra, tvůj dnešní kouč.
+
+8
+00:00:13,420 --> 00:00:16,346
+A dnešní lekce Stoppr je skutečná životní zkušenost.
+
+9
+00:00:16,496 --> 00:00:18,307
+Jedna, kterou jsi pravděpodobně zažil.
+
+10
+00:00:18,557 --> 00:00:20,322
+Pojďme si promluvit o tlaku vrstevníků.
+
+11
+00:00:20,472 --> 00:00:21,447
+A cukr.
+
+12
+00:00:21,836 --> 00:00:22,858
+Jste na večeři.
+
+13
+00:00:23,008 --> 00:00:24,494
+Možná s přáteli.
+
+14
+00:00:24,644 --> 00:00:25,898
+Možná s rodinou.
+
+15
+00:00:26,048 --> 00:00:29,159
+Jídlo je hotové, a pak—tady to přichází.
+
+16
+00:00:29,409 --> 00:00:30,570
+Obří dezert.
+
+17
+00:00:29,409 --> 00:00:30,570
+Obří dezert.
+
+18
+00:00:30,720 --> 00:00:32,299
+Položený přímo doprostřed.
+
+19
+00:00:32,449 --> 00:00:33,796
+Všichni se usmívají.
+
+20
+00:00:33,946 --> 00:00:36,036
+Všichni říkají: "Dej si jen trochu!"
+
+21
+00:00:36,286 --> 00:00:37,818
+A teď je to trapné.
+
+22
+00:00:38,068 --> 00:00:39,833
+Nechtěli jste dnes večer cukr.
+
+23
+00:00:39,983 --> 00:00:41,423
+Slíbili jste si to.
+
+24
+00:00:41,573 --> 00:00:43,245
+Ale teď je to před vámi.
+
+25
+00:00:43,395 --> 00:00:45,438
+A také lidé, na kterých vám záleží.
+
+26
+00:00:45,688 --> 00:00:47,824
+Říct ne najednou působí nezdvořile.
+
+27
+00:00:47,974 --> 00:00:48,857
+Nebo divně.
+
+28
+00:00:49,007 --> 00:00:51,282
+Nebo jako byste dělali rozruch.
+
+29
+00:00:51,532 --> 00:00:53,808
+Toto je jeden z nejtěžších okamžiků.
+
+30
+00:00:53,958 --> 00:00:57,023
+Ne proto, že nemáte vůli – ale protože nemáte
+
+31
+00:00:57,023 --> 00:00:58,555
+nechcete nikoho zklamat.
+
+32
+00:00:58,705 --> 00:01:00,191
+Nechcete to vysvětlovat.
+
+33
+00:00:58,705 --> 00:01:00,191
+Nechcete to vysvětlovat.
+
+34
+00:01:00,341 --> 00:01:02,060
+Nechcete vyčnívat.
+
+35
+00:01:02,310 --> 00:01:04,817
+Cukr v těchto chvílích není o chuti.
+
+36
+00:01:04,967 --> 00:01:06,407
+Je to o zapadnutí.
+
+37
+00:01:06,657 --> 00:01:07,632
+Jíte ho.
+
+38
+00:01:07,782 --> 00:01:11,544
+Ne proto, že chcete – ale protože je to snazší než říct ne.
+
+39
+00:01:11,794 --> 00:01:14,534
+A potom se možná cítíte trochu nesví.
+
+40
+00:01:14,684 --> 00:01:15,659
+Fyzicky.
+
+41
+00:01:15,809 --> 00:01:16,738
+Emočně.
+
+42
+00:01:16,888 --> 00:01:18,885
+Jako byste porušili svůj vlastní slib.
+
+43
+00:01:19,135 --> 00:01:22,478
+Ale tady je pravda: tyto momenty se stanou.
+
+44
+00:01:22,628 --> 00:01:24,207
+A nedělají vás slabými.
+
+45
+00:01:24,457 --> 00:01:25,897
+Dělají vás lidskými.
+
+46
+00:01:26,147 --> 00:01:28,190
+Prvním krokem je si toho všimnout.
+
+47
+00:01:28,340 --> 00:01:29,316
+Pojmenovat to.
+
+48
+00:01:29,466 --> 00:01:31,323
+Nejde jen o cukr.
+
+49
+00:01:29,466 --> 00:01:31,323
+Nejde jen o cukr.
+
+50
+00:01:31,473 --> 00:01:33,238
+Jde o společenský tlak.
+
+51
+00:01:33,388 --> 00:01:34,456
+To je skutečné.
+
+52
+00:01:34,606 --> 00:01:35,813
+To je silné.
+
+53
+00:01:36,063 --> 00:01:38,200
+Nemůžete vždy ovládat okolí.
+
+54
+00:01:38,350 --> 00:01:40,486
+Ale můžete ovládat své uvědomění.
+
+55
+00:01:40,736 --> 00:01:44,126
+A časem, s praxí, najdete svá slova.
+
+56
+00:01:44,276 --> 00:01:46,505
+Vaše malé způsoby, jak zůstat věrní sami sobě.
+
+57
+00:01:46,755 --> 00:01:49,402
+I když na vás dezert zírá.
+
+58
+00:01:49,803 --> 00:01:50,813
+Máte to pod kontrolou.
+
+59
+00:01:51,063 --> 00:01:52,642
+Uvidíme se v další lekci.
+

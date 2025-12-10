@@ -1,0 +1,625 @@
+import 'dart:async';
+import 'dart:math';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'home_screen.dart';
+import 'relapsed_screen.dart';
+import 'thinking_relapsing_screen.dart';
+import '../../../../core/analytics/mixpanel_service.dart';
+import '../../../../core/navigation/page_transitions.dart';
+
+class PanicButtonScreen extends StatefulWidget {
+  const PanicButtonScreen({super.key});
+
+  @override
+  State<PanicButtonScreen> createState() => _PanicButtonScreenState();
+}
+
+class _PanicButtonScreenState extends State<PanicButtonScreen> with SingleTickerProviderStateMixin {
+  int _currentMessageIndex = 0;
+  Timer? _messageTimer;
+  Timer? _typingTimer;
+  String? _firstName;
+  String _displayedText = "";
+  int _currentCharIndex = 0;
+  bool _isTypingComplete = false;
+  
+  // Multiple sets of messages for random selection
+  final List<List<String>> _allMessageSets = [
+    // Set 1 (Original)
+    [
+      "BREATHE IN, BREATHE OUT.",
+      "DON'T TRADE PROGRESS FOR TEMPORARY SWEETNESS.",
+      "THIS CRAVING WILL PASS IN A FEW MINUTES.",
+      "REMEMBER HOW BAD YOU FEEL AFTER A SUGAR CRASH.",
+      "STAY STRONG, {firstName}.",
+      "EVERY MINUTE YOU RESIST IS A VICTORY.",
+      "YOU'RE STRONGER THAN THIS SUGAR CRAVING.",
+      "YOUR FUTURE HEALTH DEPENDS ON TODAY'S CHOICES.",
+    ],
+    // Set 2
+    [
+      "ONE STEP AT A TIME.",
+      "YOU'VE COME TOO FAR TO GIVE UP NOW.",
+      "YOUR BODY DESERVES BETTER THAN SUGAR.",
+      "IMAGINE HOW PROUD YOU'LL BE TOMORROW.",
+      "YOU CONTROL CRAVINGS THEY DON'T CONTROL YOU.",
+      "THIS MOMENT WILL PASS, {firstName}.",
+      "FOCUS ON YOUR GOALS NOT TEMPORARY PLEASURE.",
+      "YOUR FUTURE SELF WILL THANK YOU.",
+    ],
+    // Set 3
+    [
+      "MIND OVER MATTER.",
+      "SUGAR IS NOT WORTH YOUR HEALTH.",
+      "DISTRACT YOURSELF FOR 5 MINUTES.",
+      "CRAVINGS ARE TEMPORARY YOUR GOALS ARE NOT.",
+      "BE PATIENT WITH YOURSELF, {firstName}.",
+      "YOU ARE BREAKING THE SUGAR CYCLE.",
+      "SUGAR GIVES MINUTES OF JOY HOURS OF REGRET.",
+      "THINK OF YOUR PROGRESS DON'T LOSE IT NOW.",
+    ],
+    // Set 4
+    [
+      "FIND YOUR ZEN.",
+      "SUGAR IS A TRAP DON'T FALL FOR IT.",
+      "GO FOR A WALK CLEAR YOUR MIND.",
+      "REMEMBER YOUR 'WHY' IT'S MORE IMPORTANT.",
+      "YOU'RE DOING GREAT, {firstName}.",
+      "DRINK WATER HUNGER IS OFTEN THIRST.",
+      "VISUALIZE YOUR SUCCESS MAKE IT REAL.",
+      "YOU ARE REWIRING YOUR BRAIN RIGHT NOW.",
+    ],
+    // Set 5
+    [
+      "PAUSE. BREATHE. RESET.",
+      "THE CRAVING IS A WAVE LET IT WASH OVER YOU.",
+      "WHAT YOU RESIST BECOMES WEAKER.",
+      "THE SWEETEST VICTORY IS OVER YOURSELF.",
+      "STAY IN CONTROL, {firstName}.",
+      "DISCOMFORT NOW EQUALS FREEDOM LATER.",
+      "SUGAR CLOUDS YOUR MIND CLARITY AWAITS.",
+      "YOU WERE BORN TO OVERCOME THIS.",
+    ],
+    // Set 6
+    [
+      "CALMNESS IS YOUR POWER.",
+      "SUGAR IS STEALING YOUR ENERGY.",
+      "YOU DESERVE REAL HEALTH NOT FAKE PLEASURE.",
+      "RIDE OUT THIS WAVE IT GETS EASIER.",
+      "PERSISTENCE WINS, {firstName}.",
+      "YOUR BODY IS HEALING DON'T INTERRUPT IT.",
+      "FEED YOUR STRENGTH NOT YOUR WEAKNESS.",
+      "SMALL DECISIONS CREATE BIG RESULTS.",
+    ],
+    // Set 7
+    [
+      "FIND YOUR CENTER.",
+      "YOUR HEALTH IS NON-NEGOTIABLE.",
+      "THE URGE IS TEMPORARY THE ACHIEVEMENT LASTS.",
+      "SUGAR LIES YOUR BODY TELLS TRUTH.",
+      "TRUST THE PROCESS, {firstName}.",
+      "EACH 'NO' BUILDS YOUR POWER OF CHOICE.",
+      "CHANGE HAPPENS ONE DECISION AT A TIME.",
+      "YOUR WILL IS STRONGER THAN ANY CRAVING.",
+    ],
+    // Set 8
+    [
+      "YOU ARE THE MASTER OF YOUR CRAVINGS.",
+      "FEEL THE URGE LET IT PASS.",
+      "SUGAR ADDICTION IS LOSING ITS GRIP.",
+      "IMAGINE WAKING UP PROUD TOMORROW.",
+      "YOU'VE GOT THIS, {firstName}.",
+      "BREAKING HABITS TAKES COURAGE.",
+      "CHOOSE HEALTH NOW ENJOY LIFE LONGER.",
+      "THE HARDEST BATTLES WIN THE GREATEST VICTORIES.",
+    ],
+    // Set 9
+    [
+      "BREATHE THROUGH IT.",
+      "THIS IS YOUR MOMENT OF TRANSFORMATION.",
+      "YOUR BODY IS THANKING YOU FOR RESISTING.",
+      "WATCH CRAVINGS RISE AND THEN FALL AWAY.",
+      "YOU ARE RESILIENT, {firstName}.",
+      "FREEDOM FROM SUGAR IS WORTH FIGHTING FOR.",
+      "YOUR HEALTH JOURNEY IS BIGGER THAN ONE MOMENT.",
+      "STRONG MIND LEADS TO STRONG BODY.",
+    ],
+    // Set 10
+    [
+      "FIND YOUR STRENGTH.",
+      "SUGAR PROMISES HAPPINESS BUT DELIVERS REGRET.",
+      "DISTRACT YOURSELF UNTIL IT PASSES.",
+      "YOUR HEALTH DESERVES YOUR PROTECTION.",
+      "YOU ARE TRANSFORMING, {firstName}.",
+      "EACH CRAVING DEFEATED MAKES YOU STRONGER.",
+      "THE REWARD FOR RESISTANCE IS SWEET FREEDOM.",
+      "CHOOSE YOUR FUTURE NOT MOMENTARY PLEASURE.",
+    ],
+    // Set 11
+    [
+      "SLOW DOWN. BE PRESENT.",
+      "ADDICTION THRIVES ON IMPULSIVE DECISIONS.",
+      "SUGAR'S PLEASURE IS BRIEF REGRET LASTS LONGER.",
+      "YOUR BODY IS HEALING WITH EVERY SUGAR-FREE DAY.",
+      "YOU'RE BREAKING THE CYCLE, {firstName}.",
+      "CRAVINGS COME AND GO YOUR HEALTH IS FOREVER.",
+      "WHAT YOU RESIST PERSISTENTLY CEASES TO EXIST.",
+      "CHOOSE LONG-TERM HAPPINESS OVER QUICK PLEASURE.",
+    ],
+  ];
+  
+  // Currently active set of messages
+  late List<String> _baseMessages;
+  
+  // Generated messages with personalization
+  late List<String> _messages;
+  
+  final List<Map<String, dynamic>> _sideEffects = [
+    {
+      'title': 'WEIGHT GAIN',
+      'description': 'Extra sugar gets stored as fat in your body.',
+      'icon': Icons.monitor_weight,
+    },
+    {
+      'title': 'BLOOD SUGAR SPIKES',
+      'description': 'Increases risk of diabetes and health issues.',
+      'icon': Icons.show_chart,
+    },
+    {
+      'title': 'ENERGY CRASHES',
+      'description': 'Initial high followed by fatigue and brain fog.',
+      'icon': Icons.battery_alert,
+    },
+    {
+      'title': 'INTENSIFIED CRAVINGS',
+      'description': 'Sugar triggers addiction-like dependency patterns.',
+      'icon': Icons.no_food,
+    },
+    {
+      'title': 'MOOD SWINGS',
+      'description': 'Irritability and anxiety when sugar levels drop.',
+      'icon': Icons.mood_bad,
+    },
+  ];
+
+  @override
+  void initState() {
+    super.initState();
+    
+    // Track page view with Mixpanel
+    MixpanelService.trackPageView('Panic Button Screen');
+    
+    // Select a random message set
+    _selectRandomMessageSet();
+    
+    // Initialize messages array with placeholder
+    _messages = List.from(_baseMessages);
+    
+    // Load the user's first name
+    _loadUserFirstName();
+    
+    // Initialize typing animation
+    _startTypingAnimation();
+    
+    // Force status bar icons to white mode with stronger settings
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.light,
+      statusBarBrightness: Brightness.dark, // iOS uses opposite naming
+      systemNavigationBarColor: Colors.transparent,
+      systemNavigationBarIconBrightness: Brightness.light,
+      systemNavigationBarDividerColor: Colors.transparent,
+    ));
+    
+    // Make app fullscreen and immersive
+    SystemChrome.setEnabledSystemUIMode(
+      SystemUiMode.edgeToEdge,
+      overlays: [SystemUiOverlay.top],
+    );
+  }
+  
+  // Method to open medical information URL
+  Future<void> _openMedicalInfo() async {
+    // Track button tap with Mixpanel
+    MixpanelService.trackButtonTap('Help & Info', screenName: 'Panic Button Screen');
+    
+    final Uri url = Uri.parse('https://elevenlife.notion.site/Stoppr-1c3456d8905e80029856d5373ee08dfb?pvs=4');
+    try {
+      if (await canLaunchUrl(url)) {
+        await launchUrl(
+          url,
+          mode: LaunchMode.inAppWebView,
+        );
+      } else {
+        debugPrint('Could not launch help & info URL');
+      }
+    } catch (e) {
+      debugPrint('Error launching help & info URL: $e');
+    }
+  }
+  
+  // Select a random message set from the available sets
+  void _selectRandomMessageSet() {
+    final random = Random();
+    final randomIndex = random.nextInt(_allMessageSets.length);
+    _baseMessages = _allMessageSets[randomIndex];
+  }
+  
+  // Load the user's first name from SharedPreferences
+  Future<void> _loadUserFirstName() async {
+    final prefs = await SharedPreferences.getInstance();
+    final firstName = prefs.getString('user_first_name');
+    
+    if (mounted) {
+      setState(() {
+        _firstName = firstName;
+        // Update the personalized messages
+        _updatePersonalizedMessages();
+      });
+    }
+  }
+  
+  // Update messages with the user's first name
+  void _updatePersonalizedMessages() {
+    _messages = _baseMessages.map((message) {
+      if (_firstName != null && _firstName!.isNotEmpty) {
+        return message.replaceAll('{firstName}', _firstName!.toUpperCase());
+      } else {
+        // If no first name is available, use a generic message
+        return message.replaceAll(', {firstName}', '').replaceAll('{firstName}', 'YOU');
+      }
+    }).toList();
+    
+    // Restart typing animation with the new messages
+    _startTypingAnimation();
+  }
+
+  void _startTypingAnimation() {
+    // Reset typing state
+    _isTypingComplete = false;
+    _currentCharIndex = 0;
+    _displayedText = "";
+    
+    // Cancel previous timers if any
+    _typingTimer?.cancel();
+    _messageTimer?.cancel();
+    
+    // Start typing the first message
+    _typeCurrentMessage();
+  }
+  
+  void _typeCurrentMessage() {
+    final currentMessage = _messages[_currentMessageIndex];
+    
+    _typingTimer = Timer.periodic(const Duration(milliseconds: 50), (timer) {
+      if (_currentCharIndex < currentMessage.length) {
+        setState(() {
+          _displayedText = currentMessage.substring(0, _currentCharIndex + 1);
+          _currentCharIndex++;
+        });
+      } else {
+        timer.cancel();
+        _isTypingComplete = true;
+        
+        // After completing typing, wait before showing next message
+        _messageTimer = Timer(const Duration(seconds: 3), () {
+          if (mounted) {
+            setState(() {
+              _currentMessageIndex = (_currentMessageIndex + 1) % _messages.length;
+              _startTypingAnimation();
+            });
+          }
+        });
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _messageTimer?.cancel();
+    _typingTimer?.cancel();
+    
+    // Restore default status bar
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.light,
+      statusBarBrightness: Brightness.dark,
+    ));
+    SystemChrome.setEnabledSystemUIMode(
+      SystemUiMode.edgeToEdge,
+      overlays: [SystemUiOverlay.top, SystemUiOverlay.bottom],
+    );
+    
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.light,
+        statusBarBrightness: Brightness.dark,
+        systemNavigationBarColor: Colors.transparent,
+        systemNavigationBarIconBrightness: Brightness.light,
+        systemNavigationBarDividerColor: Colors.transparent,
+      ),
+      child: Scaffold(
+        backgroundColor: const Color(0xFF140120),
+        extendBodyBehindAppBar: true,
+        extendBody: true,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          leading: IconButton(
+            icon: const Icon(Icons.close, color: Colors.white),
+            onPressed: () => Navigator.of(context).pushReplacement(
+              TopToBottomPageRoute(
+                child: const HomeScreen(),
+                settings: const RouteSettings(name: '/home'),
+              ),
+            ),
+          ),
+          title: Image.asset(
+            'assets/images/logo/STOPPR_logo.png',
+            height: 64,
+          ),
+          centerTitle: true,
+          actions: [
+            // Help & Info icon
+            IconButton(
+              icon: const Icon(
+                Icons.help_outline,
+                color: Colors.white,
+                size: 28,
+              ),
+              onPressed: _openMedicalInfo,
+              tooltip: 'Help & Information',
+            ),
+          ],
+          systemOverlayStyle: const SystemUiOverlayStyle(
+            statusBarColor: Colors.transparent,
+            statusBarIconBrightness: Brightness.light,
+            statusBarBrightness: Brightness.dark,
+          ),
+        ),
+        body: Stack(
+          children: [
+            // Scrollable content
+            SafeArea(
+              bottom: false, // Important: don't add safe area at bottom to allow sticky buttons
+              child: ListView(
+                padding: EdgeInsets.only(
+                  bottom: 140, // Add padding to prevent content from going behind sticky buttons
+                ),
+                children: [
+                  const SizedBox(height: 20),
+                  // Title
+                  const Text(
+                    'Panic Button',
+                    style: TextStyle(
+                      color: Color(0xFFFF3B30),
+                      fontSize: 20,
+                      fontFamily: 'ElzaRound',
+                      fontWeight: FontWeight.w600,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  
+                  // Animated message with typing effect
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.25,
+                    child: Center(
+                      child: Text(
+                        _displayedText,
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 28,
+                          fontFamily: 'ElzaRound',
+                          fontWeight: FontWeight.w700,
+                          height: 1.2,
+                        ),
+                      ),
+                    ),
+                  ),
+                  
+                  // Side effects section
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        width: double.infinity,
+                        child: const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                          child: Text(
+                            'Side effects of Sugar Consumption:',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontFamily: 'ElzaRound',
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        margin: const EdgeInsets.all(20),
+                        padding: const EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF1A1A1A),
+                          borderRadius: BorderRadius.circular(16),
+                          border: Border.all(
+                            color: Colors.white.withOpacity(0.1),
+                            width: 1,
+                          ),
+                        ),
+                        child: Column(
+                          children: _sideEffects.map((effect) => _buildSideEffectRow(
+                            title: effect['title']!,
+                            description: effect['description']!,
+                            icon: effect['icon']!,
+                          )).toList(),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            
+            // Sticky buttons at bottom
+            Positioned(
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: Container(
+                padding: EdgeInsets.fromLTRB(
+                  20, 
+                  16, 
+                  20, 
+                  MediaQuery.of(context).padding.bottom + 20
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.black,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.5),
+                      blurRadius: 10,
+                      offset: const Offset(0, -5),
+                    ),
+                  ],
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        // Handle relapse action
+                        Navigator.of(context).pushReplacement(
+                          BottomToTopPageRoute(
+                            child: const RelapsedScreen(),
+                            settings: const RouteSettings(name: '/relapsed'),
+                          ),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFF1A1A1A),
+                        foregroundColor: const Color(0xFFFF3B30),
+                        minimumSize: const Size(double.infinity, 50),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                        side: const BorderSide(color: Color(0xFFFF3B30)),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          Icon(Icons.thumb_down, size: 20),
+                          SizedBox(width: 8),
+                          Text(
+                            'I Relapsed',
+                            style: TextStyle(
+                              fontFamily: 'ElzaRound',
+                              fontWeight: FontWeight.w600,
+                              fontSize: 18,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    ElevatedButton(
+                      onPressed: () {
+                        // Handle thinking of relapsing action
+                        Navigator.of(context).pushReplacement(
+                          BottomToTopPageRoute(
+                            child: const ThinkingRelapsingScreen(),
+                            settings: const RouteSettings(name: '/thinking_relapsing'),
+                          ),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFFFF3B30),
+                        foregroundColor: Colors.white,
+                        minimumSize: const Size(double.infinity, 50),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          Icon(Icons.warning, size: 20),
+                          SizedBox(width: 8),
+                          Text(
+                            "I'm thinking of relapsing",
+                            style: TextStyle(
+                              fontFamily: 'ElzaRound',
+                              fontWeight: FontWeight.w600,
+                              fontSize: 18,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+  
+  Widget _buildSideEffectRow({
+    required String title,
+    required String description,
+    required IconData icon,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Icon(
+            icon,
+            color: Colors.white,
+            size: 24,
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontFamily: 'ElzaRound',
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  description,
+                  style: TextStyle(
+                    color: Colors.white.withOpacity(0.7),
+                    fontSize: 14,
+                    fontFamily: 'ElzaRound',
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+} 

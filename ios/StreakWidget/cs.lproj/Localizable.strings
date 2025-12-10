@@ -1,0 +1,23 @@
+"widget_sugarFreeSince" = "Bez cukru od:";
+"panic_button_label" = "Tlačítko\npaniky";
+"quick_meditation_label" = "Rychlá\nmeditace";
+"widget_subscribeToTrackStreak" = "Předplať si, abys sledoval svou sérii";
+"pledge_widget_label" = "Denní slib";
+"widget_hours_abbrev" = "h";
+"widget_minutes_abbrev" = "min";
+"pledge_widget_display_name" = "Denní slib";
+"pledge_widget_description_ios" = "Rychlé otevření denního slibu.";
+"streak_widget_display_name" = "Stoppr série";
+"streak_widget_description_ios" = "Sleduj svou sérii bez cukru.";
+"quick_meditation_display_name" = "Rychlá meditace";
+"quick_meditation_description_ios" = "Otevřít Rychlou meditaci.";
+"panic_widget_display_name" = "Tlačítko paniky";
+"panic_widget_description_ios" = "Rychle otevřít Tlačítko paniky.";
+"widget_accountability_title" = "Zotavení";
+"widget_days_suffix" = "Dny";
+"accountability_widget_display_name" = "Partner zodpovědnosti";
+"accountability_widget_description" = "Sleduj svůj pokrok v zotavování se svým partnerem";
+"widget_accountability_no_partner_title" = "Najdi svého partnera";
+"widget_accountability_no_partner_subtitle" = "Spáruj se s někým, abyste sledovali pokrok společně";
+"widget_days_count" = "%d Den/Dny";
+

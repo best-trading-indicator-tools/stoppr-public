@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ad_id_usage">We use IDFA for promoting our service on advertising platforms. We don\'t pass your personal data on to someone else.</string>
+    <string name="camera_usage">We need camera access to let you take photos of your meals for tracking.</string>
+    <string name="location_usage">We need your location to find healthy food options near you.</string>
+    <string name="photo_library_usage">We need photo library access to let you choose photos of your meals for tracking.</string>
+    <string name="microphone_usage">We need microphone access to allow voice chat with Jarvis</string>
+    <string name="streak_widget_description">Track your sugar-free streak.</string>
+    <string name="pledge_widget_description">Open the Daily Pledge quickly.</string>
+    <string name="panic_widget_description">Open the Panic Button quickly.</string>
+    <string name="quick_meditation_widget_description">Open Quick Meditation.</string>
+    <string name="quick_meditation_label">Quick\nMeditation</string>
+    <string name="panic_button_label">Panic\nButton</string>
+    <string name="streak_label_sugar_free_since">Sugar-free since:</string>
+    <string name="streak_subscribe_prompt">Subscribe to\ntrack your streak</string>
+    <string name="streak_day_suffix_singular"> Day</string>
+    <string name="streak_days_suffix"> Days</string>
+    <string name="streak_hours_abbrev">hr</string>
+    <string name="streak_minutes_abbrev">m</string>
+    <string name="pledge_widget_label">✋\nDaily Pledge</string>
+    <string name="accountability_widget_description">Track your recovery with your partner</string>
+    <string name="widget_accountability_no_partner_title">Find Your Partner</string>
+    <string name="widget_accountability_no_partner_subtitle">Pair with someone to track progress together</string>
+    
+    <!-- REPLACE: Your Facebook App ID (from Facebook Developers) -->
+    <!-- Get from: https://developers.facebook.com/ → Your App → Settings → Basic → App ID -->
+    <string name="facebook_app_id">YOUR_FACEBOOK_APP_ID</string>
+    
+    <!-- REPLACE: Your Facebook Client Token (from Facebook Developers) -->
+    <!-- Get from: https://developers.facebook.com/ → Your App → Settings → Advanced → Security → Client Token -->
+    <!-- ⚠️ SENSITIVE: Keep this secret, never commit it to version control -->
+    <string name="facebook_client_token">YOUR_FACEBOOK_CLIENT_TOKEN</string>
+</resources>
+

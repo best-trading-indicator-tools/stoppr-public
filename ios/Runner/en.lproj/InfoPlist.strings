@@ -1,0 +1,11 @@
+"NSUserTrackingUsageDescription" = "Allow us to track your journey so we can understand which campaign brought you to STOPPR. This helps us reach more people who want to quit sugar and feel better. More users mean more motivation, shared progress, and better tools for you. Opt in to support our growth and join the movement to live clear, energized, and sugar-free!";
+
+"NSCameraUsageDescription" = "We use the camera so you can take meal photos for tracking.";
+"NSLocationWhenInUseUsageDescription" = "We use your location to find healthy options near you.";
+"NSPhotoLibraryUsageDescription" = "We use your photo library so you can select meal photos for tracking.";
+"NSMicrophoneUsageDescription" = "We use the microphone to enable voice chat with Melinda.";
+"NSContactsUsageDescription" = "We access contacts so you can share your streak widget with friends for accountability.";
+"NSUserNotificationsUsageDescription" = "Enabling notifications increase by 63% your chances to resist your sugar cravings. Notifications may include alerts, sounds, and icon badges. These can be configured in Settings.";
+"NSUserNotificationUsageDescription" = "Enabling notifications increase by 63% your chances to resist your sugar cravings. Notifications may include alerts, sounds, and icon badges. These can be configured in Settings.";
+
+

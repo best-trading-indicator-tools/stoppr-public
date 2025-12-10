@@ -1,0 +1,16 @@
+"NSUserTrackingUsageDescription" = "Permítenos seguir tu recorrido para entender qué campaña te trajo a STOPPR. Esto nos ayuda a llegar a más personas que quieren dejar el azúcar y sentirse mejor. Más usuarios significan más motivación, progreso compartido y mejores herramientas para ti. ¡Activa el permiso para apoyar nuestro crecimiento y únete al movimiento por una vida clara, con energía y sin azúcar!";
+
+"NSCameraUsageDescription" = "Usamos la cámara para que puedas fotografiar tus comidas.";
+"NSLocationWhenInUseUsageDescription" = "Usamos tu ubicación para encontrar opciones saludables cerca de ti.";
+"NSPhotoLibraryUsageDescription" = "Usamos tu galería para que puedas elegir fotos de comidas.";
+"NSMicrophoneUsageDescription" = "Usamos el micrófono para habilitar el chat de voz con Melinda.";
+"NSContactsUsageDescription" = "Accedemos a tus contactos para que compartas tu widget de racha con amigos.";
+"NSUserNotificationsUsageDescription" = "Activar las notificaciones aumenta en un 63% tus posibilidades de resistir tus antojos de azúcar. Las notificaciones pueden incluir alertas, sonidos y distintivos en el icono. Puedes configurarlas en Ajustes.";
+"NSUserNotificationUsageDescription" = "Activar las notificaciones aumenta en un 63% tus posibilidades de resistir tus antojos de azúcar. Las notificaciones pueden incluir alertas, sonidos y distintivos en el icono. Puedes configurarlas en Ajustes.";
+"NSCameraUsageDescription" = "Necesitamos acceso a la cámara para permitirte tomar fotos de tus comidas para el seguimiento.";
+"NSLocationWhenInUseUsageDescription" = "Necesitamos tu ubicación para encontrar opciones de comida saludable cerca de ti.";
+"NSPhotoLibraryUsageDescription" = "Necesitamos acceso a la fototeca para permitirte elegir fotos de tus comidas para el seguimiento.";
+"NSUserTrackingUsageDescription" = "Utilizamos IDFA para promocionar nuestro servicio en plataformas publicitarias. No transmitimos tus datos personales a terceros.";
+"NSMicrophoneUsageDescription" = "Necesitamos acceso al micrófono para permitir el chat de voz con Jarvis.";
+"NSUserNotificationsUsageDescription" = "Activar las notificaciones aumenta en un 63% tus posibilidades de resistir tus antojos de azúcar. Las notificaciones pueden incluir alertas, sonidos y distintivos en el icono. Puedes configurarlas en Ajustes.";
+"NSUserNotificationUsageDescription" = "Activar las notificaciones aumenta en un 63% tus posibilidades de resistir tus antojos de azúcar. Las notificaciones pueden incluir alertas, sonidos y distintivos en el icono. Puedes configurarlas en Ajustes.";

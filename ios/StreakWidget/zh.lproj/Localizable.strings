@@ -1,0 +1,23 @@
+"widget_sugarFreeSince" = "无糖开始于：";
+"panic_button_label" = "紧急\n按钮";
+"quick_meditation_label" = "快速\n冥想";
+"widget_subscribeToTrackStreak" = "订阅以跟踪你的连续天数";
+"pledge_widget_label" = "每日誓言";
+"widget_hours_abbrev" = "小时";
+"widget_minutes_abbrev" = "分";
+"pledge_widget_display_name" = "每日誓言";
+"pledge_widget_description_ios" = "快速打开每日誓言。";
+"streak_widget_display_name" = "Stoppr 连续";
+"streak_widget_description_ios" = "跟踪你的无糖连续天数。";
+"quick_meditation_display_name" = "快速冥想";
+"quick_meditation_description_ios" = "打开快速冥想。";
+"panic_widget_display_name" = "紧急按钮";
+"panic_widget_description_ios" = "快速打开紧急按钮。";
+"widget_accountability_title" = "恢复";
+"widget_days_suffix" = "天";
+"accountability_widget_display_name" = "问责伙伴";
+"accountability_widget_description" = "与你的伙伴一起追踪恢复进度";
+"widget_accountability_no_partner_title" = "找到你的伙伴";
+"widget_accountability_no_partner_subtitle" = "与某人配对以共同追踪进度";
+"widget_days_count" = "%d 天";
+

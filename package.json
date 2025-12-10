@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@sendgrid/client": "^8.1.5",
+    "dotenv": "^17.2.1",
+    "firebase-admin": "^13.4.0"
+  }
+}

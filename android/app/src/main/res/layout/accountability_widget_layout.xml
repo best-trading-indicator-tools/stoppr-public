@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@android:color/white"
+    android:padding="16dp">
+
+    <!-- Left section - Me -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/tv_my_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/elza_round_bold"
+            tools:text="Sarah"
+            android:textColor="#FF1A1A1A"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Recovery ring with content -->
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+            
+            <!-- Background circle -->
+            <ProgressBar
+                android:id="@+id/progress_my_ring_background"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:max="100"
+                android:progress="100"
+                android:progressDrawable="@drawable/widget_progress_ring_background"
+                android:indeterminate="false" />
+            
+            <!-- Progress circle -->
+            <ProgressBar
+                android:id="@+id/progress_my_ring"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:max="100"
+                tools:progress="5"
+                android:progressDrawable="@drawable/widget_progress_ring"
+                android:indeterminate="false" />
+
+            <!-- Content inside ring -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <!-- RECOVERY title -->
+                <TextView
+                    android:id="@+id/tv_my_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/elza_round_bold"
+                    tools:text="RECOVERY"
+                    android:textColor="#FF1A1A1A"
+                    android:textSize="9sp"
+                    android:maxLines="1" />
+
+                <!-- Percentage -->
+                <TextView
+                    android:id="@+id/tv_my_percentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/elza_round_bold"
+                    tools:text="5%"
+                    android:textColor="#FF1A1A1A"
+                    android:textSize="24sp"
+                    android:maxLines="1" />
+
+                <!-- Days text -->
+                <TextView
+                    android:id="@+id/tv_my_days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/elza_round_medium"
+                    tools:text="5 Days"
+                    android:textColor="#FF666666"
+                    android:textSize="10sp"
+                    android:maxLines="1" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Vertical separator -->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#FFE0E0E0"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp" />
+
+    <!-- Right section - Partner -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/tv_partner_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/elza_round_bold"
+            tools:text="Alex"
+            android:textColor="#FF1A1A1A"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Recovery ring with content -->
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+            
+            <!-- Background circle -->
+            <ProgressBar
+                android:id="@+id/progress_partner_ring_background"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:max="100"
+                android:progress="100"
+                android:progressDrawable="@drawable/widget_progress_ring_background"
+                android:indeterminate="false" />
+            
+            <!-- Progress circle -->
+            <ProgressBar
+                android:id="@+id/progress_partner_ring"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:max="100"
+                tools:progress="2"
+                android:progressDrawable="@drawable/widget_progress_ring"
+                android:indeterminate="false" />
+
+            <!-- Content inside ring -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <!-- RECOVERY title -->
+                <TextView
+                    android:id="@+id/tv_partner_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/elza_round_bold"
+                    tools:text="RECOVERY"
+                    android:textColor="#FF1A1A1A"
+                    android:textSize="9sp"
+                    android:maxLines="1" />
+
+                <!-- Percentage -->
+                <TextView
+                    android:id="@+id/tv_partner_percentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/elza_round_bold"
+                    tools:text="2%"
+                    android:textColor="#FF1A1A1A"
+                    android:textSize="24sp"
+                    android:maxLines="1" />
+
+                <!-- Days text -->
+                <TextView
+                    android:id="@+id/tv_partner_days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/elza_round_medium"
+                    tools:text="2 Days"
+                    android:textColor="#FF666666"
+                    android:textSize="10sp"
+                    android:maxLines="1" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>
+

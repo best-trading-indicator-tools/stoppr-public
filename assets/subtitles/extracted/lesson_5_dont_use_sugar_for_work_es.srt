@@ -1,0 +1,268 @@
+1
+00:00:01,850 --> 00:00:02,685
+¡Bienvenido de nuevo!
+
+2
+00:00:02,935 --> 00:00:03,539
+Sí.
+
+3
+00:00:03,789 --> 00:00:05,229
+Ya nos conocemos.
+
+4
+00:00:05,479 --> 00:00:06,547
+Soy Mark otra vez.
+
+5
+00:00:06,697 --> 00:00:08,369
+Y tengo otra lección para ti.
+
+6
+00:00:08,519 --> 00:00:09,355
+¿Estás listo?
+
+7
+00:00:09,605 --> 00:00:13,041
+Parece que has hecho muchas lecciones, con muchos de mis colegas.
+
+8
+00:00:13,341 --> 00:00:14,734
+Estás realmente motivado.
+
+9
+00:00:14,884 --> 00:00:15,720
+¡Me gusta!
+
+10
+00:00:15,970 --> 00:00:18,850
+Sigamos con tu aprendizaje y veamos qué más puedes descubrir.
+
+11
+00:00:19,100 --> 00:00:21,840
+La lección de Stoppr de hoy trata sobre otra trampa engañosa.
+
+12
+00:00:21,990 --> 00:00:23,151
+Trampa número 3.
+
+13
+00:00:23,401 --> 00:00:24,422
+Azúcar en el trabajo.
+
+14
+00:00:24,572 --> 00:00:26,198
+Usar azúcar para impulsar tu trabajo.
+
+15
+00:00:26,348 --> 00:00:27,509
+Para cumplir con un plazo.
+
+16
+00:00:27,759 --> 00:00:29,988
+Recurrir al azúcar cuando estás cansado en el trabajo.
+
+17
+00:00:30,138 --> 00:00:31,159
+Todos lo hemos hecho.
+
+18
+00:00:31,309 --> 00:00:34,351
+Tienes poca energía, se acerca un plazo, y esa galleta o
+
+19
+00:00:34,351 --> 00:00:36,000
+barra de chocolate está llamando tu nombre.
+
+20
+00:00:36,250 --> 00:00:37,968
+Hablemos de por qué eso es una trampa.
+
+21
+00:00:38,218 --> 00:00:40,169
+El azúcar te da energía rápida, sí.
+
+22
+00:00:40,319 --> 00:00:41,247
+Llega rápido.
+
+23
+00:00:41,397 --> 00:00:42,605
+Pero no dura.
+
+24
+00:00:42,755 --> 00:00:44,194
+Es como encender un fósforo.
+
+25
+00:00:44,344 --> 00:00:45,784
+Brilla por un segundo, luego se apaga.
+
+26
+00:00:46,284 --> 00:00:47,956
+Poco después, vuelves a bostezar.
+
+27
+00:00:48,106 --> 00:00:49,313
+Tu concentración disminuye.
+
+28
+00:00:49,463 --> 00:00:50,299
+¿Y adivina qué?
+
+29
+00:00:50,449 --> 00:00:51,657
+Quieres más azúcar.
+
+30
+00:00:51,807 --> 00:00:53,432
+Otro bocadillo, otro impulso.
+
+31
+00:00:53,682 --> 00:00:54,890
+Ese es el ciclo del azúcar.
+
+32
+00:00:55,040 --> 00:00:56,897
+Y una vez que estás dentro, es difícil salir.
+
+33
+00:00:57,397 --> 00:00:59,023
+Al principio parece útil.
+
+34
+00:00:59,173 --> 00:01:02,052
+Un dulce, una bebida azucarada: te da un pequeño impulso.
+
+35
+00:00:59,173 --> 00:01:02,052
+Un dulce, una bebida azucarada: te da un pequeño impulso.
+
+36
+00:01:02,202 --> 00:01:03,874
+Como un pequeño empujón hacia adelante.
+
+37
+00:01:04,124 --> 00:01:06,306
+Pero aquí está la verdad: ese empujón es falso.
+
+38
+00:01:06,456 --> 00:01:07,478
+No dura.
+
+39
+00:01:07,628 --> 00:01:09,718
+Después del subidón de azúcar, siempre hay una caída.
+
+40
+00:01:09,968 --> 00:01:10,711
+¿Y luego qué?
+
+41
+00:01:10,861 --> 00:01:12,208
+Te cuesta concentrarte.
+
+42
+00:01:12,358 --> 00:01:13,658
+Te sientes aún más cansado.
+
+43
+00:01:13,808 --> 00:01:15,526
+El trabajo se siente más difícil, no más fácil.
+
+44
+00:01:15,776 --> 00:01:17,169
+Así que recurres a más azúcar.
+
+45
+00:01:17,319 --> 00:01:17,970
+Otra vez.
+
+46
+00:01:18,120 --> 00:01:18,863
+Y otra vez.
+
+47
+00:01:19,013 --> 00:01:21,195
+Ya no es un tentempié, es un patrón.
+
+48
+00:01:21,445 --> 00:01:23,953
+Con el tiempo, tu cerebro asocia el azúcar con la concentración.
+
+49
+00:01:24,103 --> 00:01:26,611
+Empieza a pedirlo cuando las cosas se ponen difíciles.
+
+50
+00:01:26,761 --> 00:01:29,687
+No porque lo necesites, sino porque se ha convertido en tu hábito.
+
+51
+00:01:29,937 --> 00:01:33,141
+Esta relación con el azúcar en el trabajo se vuelve tóxica.
+
+52
+00:01:29,937 --> 00:01:33,141
+Esta relación con el azúcar en el trabajo se vuelve tóxica.
+
+53
+00:01:33,291 --> 00:01:35,891
+Difumina la línea entre el hambre y el estrés.
+
+54
+00:01:36,041 --> 00:01:37,342
+Entre el combustible y la evasión.
+
+55
+00:01:37,592 --> 00:01:40,878
+Te engaña haciéndote creer que estás resolviendo un problema, cuando en realidad,
+
+56
+00:01:40,878 --> 00:01:42,096
+lo estás empeorando.
+
+57
+00:01:42,346 --> 00:01:43,415
+¿Y la peor parte?
+
+58
+00:01:43,565 --> 00:01:44,911
+Te quita el poder.
+
+59
+00:01:45,061 --> 00:01:48,359
+Tu energía, tu concentración—ya no están en tus manos.
+
+60
+00:01:48,509 --> 00:01:49,855
+El azúcar lleva las riendas.
+
+61
+00:01:50,105 --> 00:01:53,170
+Pero nombrar esta trampa es el primer paso para romperla.
+
+62
+00:01:53,606 --> 00:01:54,721
+Ya lo has hecho.
+
+63
+00:01:54,971 --> 00:01:56,085
+Y eso es algo importante.
+
+64
+00:01:56,335 --> 00:01:57,728
+Eso será todo por hoy.
+
+65
+00:01:58,024 --> 00:01:59,325
+Te veré en la próxima lección.
+
+66
+00:01:59,475 --> 00:02:01,240
+Seguiremos trabajando en tu crecimiento.
+
+67
+00:01:59,475 --> 00:02:01,240
+Seguiremos trabajando en tu crecimiento.
+

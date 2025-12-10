@@ -1,0 +1,268 @@
+1
+00:00:01,850 --> 00:00:02,685
+Vitajte späť!
+
+2
+00:00:02,935 --> 00:00:03,539
+Áno.
+
+3
+00:00:03,789 --> 00:00:05,229
+Už sa poznáme.
+
+4
+00:00:05,479 --> 00:00:06,547
+Opäť je to Mark.
+
+5
+00:00:06,697 --> 00:00:08,369
+A mám pre vás ďalšiu lekciu.
+
+6
+00:00:08,519 --> 00:00:09,355
+Ste pripravení?
+
+7
+00:00:09,605 --> 00:00:13,041
+Zdá sa, že ste absolvovali veľa lekcií s mnohými mojimi kolegami.
+
+8
+00:00:13,341 --> 00:00:14,734
+Ste naozaj motivovaní.
+
+9
+00:00:14,884 --> 00:00:15,720
+Páči sa mi to!
+
+10
+00:00:15,970 --> 00:00:18,850
+Pokračujme vo vašom učení a uvidíme, čo ďalšie môžete objaviť.
+
+11
+00:00:19,100 --> 00:00:21,840
+Dnešná lekcia Stoppr je o ďalšej zákerné pasci.
+
+12
+00:00:21,990 --> 00:00:23,151
+Pasca číslo 3.
+
+13
+00:00:23,401 --> 00:00:24,422
+Cukor v práci.
+
+14
+00:00:24,572 --> 00:00:26,198
+Používanie cukru na zvýšenie výkonu v práci.
+
+15
+00:00:26,348 --> 00:00:27,509
+Na splnenie termínu.
+
+16
+00:00:27,759 --> 00:00:29,988
+Siahanie po cukre, keď ste unavení v práci.
+
+17
+00:00:30,138 --> 00:00:31,159
+Všetci sme to už urobili.
+
+18
+00:00:31,309 --> 00:00:34,351
+Máte málo energie, blíži sa termín a ten koláčik alebo
+
+19
+00:00:34,351 --> 00:00:36,000
+čokoládová tyčinka vás volá po mene.
+
+20
+00:00:36,250 --> 00:00:37,968
+Poďme si povedať, prečo je to pasca.
+
+21
+00:00:38,218 --> 00:00:40,169
+Cukor ti dáva rýchlu energiu, áno.
+
+22
+00:00:40,319 --> 00:00:41,247
+Úderí rýchlo.
+
+23
+00:00:41,397 --> 00:00:42,605
+Ale nevydrží dlho.
+
+24
+00:00:42,755 --> 00:00:44,194
+Je to ako zapáliť zápalku.
+
+25
+00:00:44,344 --> 00:00:45,784
+Na chvíľu jasná, potom zmizne.
+
+26
+00:00:46,284 --> 00:00:47,956
+Čoskoro potom zívaš znova.
+
+27
+00:00:48,106 --> 00:00:49,313
+Tvoja pozornosť klesá.
+
+28
+00:00:49,463 --> 00:00:50,299
+A hádaj čo?
+
+29
+00:00:50,449 --> 00:00:51,657
+Chceš viac cukru.
+
+30
+00:00:51,807 --> 00:00:53,432
+Ďalšia desiata, ďalší náboj.
+
+31
+00:00:53,682 --> 00:00:54,890
+To je cukrová slučka.
+
+32
+00:00:55,040 --> 00:00:56,897
+A keď ste v nej, je ťažké z nej vystúpiť.
+
+33
+00:00:57,397 --> 00:00:59,023
+Na začiatku to pôsobí užitočne.
+
+34
+00:00:59,173 --> 00:01:02,052
+Sladká pochúťka, sladký nápoj—dáva vám malý impulz.
+
+35
+00:00:59,173 --> 00:01:02,052
+Sladká pochúťka, sladký nápoj—dáva vám malý impulz.
+
+36
+00:01:02,202 --> 00:01:03,874
+Ako malý posun vpred.
+
+37
+00:01:04,124 --> 00:01:06,306
+Ale tu je pravda: ten impulz je falošný.
+
+38
+00:01:06,456 --> 00:01:07,478
+Nevydrží.
+
+39
+00:01:07,628 --> 00:01:09,718
+Po cukrovom návale vždy nasleduje pád.
+
+40
+00:01:09,968 --> 00:01:10,711
+A čo potom?
+
+41
+00:01:10,861 --> 00:01:12,208
+Máte problém sústrediť sa.
+
+42
+00:01:12,358 --> 00:01:13,658
+Cítite sa ešte viac unavení.
+
+43
+00:01:13,808 --> 00:01:15,526
+Práca sa zdá ťažšia, nie ľahšia.
+
+44
+00:01:15,776 --> 00:01:17,169
+Takže siahate po ďalšom cukre.
+
+45
+00:01:17,319 --> 00:01:17,970
+Znova.
+
+46
+00:01:18,120 --> 00:01:18,863
+A znova.
+
+47
+00:01:19,013 --> 00:01:21,195
+Už to nie je len desiata—je to vzorec.
+
+48
+00:01:21,445 --> 00:01:23,953
+Postupom času váš mozog spája cukor so sústredením.
+
+49
+00:01:24,103 --> 00:01:26,611
+Začína ho žiadať, keď sa veci stanú ťažkými.
+
+50
+00:01:26,761 --> 00:01:29,687
+Nie preto, že ho potrebujete, ale preto, že sa stal vaším zvykom.
+
+51
+00:01:29,937 --> 00:01:33,141
+Tento vzťah s cukrom v práci sa stáva toxickým.
+
+52
+00:01:29,937 --> 00:01:33,141
+Tento vzťah s cukrom v práci sa stáva toxickým.
+
+53
+00:01:33,291 --> 00:01:35,891
+Rozmazáva hranicu medzi hladom a stresom.
+
+54
+00:01:36,041 --> 00:01:37,342
+Medzi palivom a únikom.
+
+55
+00:01:37,592 --> 00:01:40,878
+Oklame vás, aby ste si mysleli, že riešite problém, keď v skutočnosti,
+
+56
+00:01:40,878 --> 00:01:42,096
+ho zhoršujete.
+
+57
+00:01:42,346 --> 00:01:43,415
+A najhoršie na tom?
+
+58
+00:01:43,565 --> 00:01:44,911
+Berie vám to silu.
+
+59
+00:01:45,061 --> 00:01:48,359
+Vaša energia, vaša sústredenosť—už nie sú vo vašich rukách.
+
+60
+00:01:48,509 --> 00:01:49,855
+Cukor riadi predstavenie.
+
+61
+00:01:50,105 --> 00:01:53,170
+Ale pomenovanie tejto pasce je prvým krokom k jej prekonaniu.
+
+62
+00:01:53,606 --> 00:01:54,721
+Už si to urobil.
+
+63
+00:01:54,971 --> 00:01:56,085
+A to je veľká vec.
+
+64
+00:01:56,335 --> 00:01:57,728
+To bude všetko na dnes.
+
+65
+00:01:58,024 --> 00:01:59,325
+Uvidíme sa v ďalšej lekcii.
+
+66
+00:01:59,475 --> 00:02:01,240
+Budeme pokračovať v práci na tvojom raste.
+
+67
+00:01:59,475 --> 00:02:01,240
+Budeme pokračovať v práci na tvojom raste.
+

@@ -1,0 +1,236 @@
+1
+00:00:00,600 --> 00:00:02,132
+Ahoj, vitaj späť.
+
+2
+00:00:02,382 --> 00:00:03,682
+Rád/a ťa vidím.
+
+3
+00:00:04,083 --> 00:00:05,186
+Stále pokračuješ.
+
+4
+00:00:05,336 --> 00:00:06,590
+To hovorí veľa.
+
+5
+00:00:06,740 --> 00:00:09,341
+Toto nie je ľahká práca, ale ty sa snažíš.
+
+6
+00:00:09,491 --> 00:00:10,698
+To je dôležité.
+
+7
+00:00:10,948 --> 00:00:13,270
+Som Cassandra, tvoja dnešná koučka.
+
+8
+00:00:13,420 --> 00:00:16,346
+A dnešná lekcia Stoppr je zo skutočného života.
+
+9
+00:00:16,496 --> 00:00:18,307
+Jedna, ktorú si pravdepodobne zažil/a.
+
+10
+00:00:18,557 --> 00:00:20,322
+Poďme sa porozprávať o tlaku rovesníkov.
+
+11
+00:00:20,472 --> 00:00:21,447
+A cukor.
+
+12
+00:00:21,836 --> 00:00:22,858
+Si na večeri.
+
+13
+00:00:23,008 --> 00:00:24,494
+Možno s priateľmi.
+
+14
+00:00:24,644 --> 00:00:25,898
+Možno s rodinou.
+
+15
+00:00:26,048 --> 00:00:29,159
+Jedlo je hotové, a potom—tu to prichádza.
+
+16
+00:00:29,409 --> 00:00:30,570
+Obrovský dezert.
+
+17
+00:00:29,409 --> 00:00:30,570
+Obrovský dezert.
+
+18
+00:00:30,720 --> 00:00:32,299
+Položený priamo do stredu.
+
+19
+00:00:32,449 --> 00:00:33,796
+Všetci sa usmievajú.
+
+20
+00:00:33,946 --> 00:00:36,036
+Všetci hovoria: "Daj si len trošku!"
+
+21
+00:00:36,286 --> 00:00:37,818
+A teraz je to trápne.
+
+22
+00:00:38,068 --> 00:00:39,833
+Nechcel/a si cukor dnes večer.
+
+23
+00:00:39,983 --> 00:00:41,423
+Sľúbil/a si si.
+
+24
+00:00:41,573 --> 00:00:43,245
+Ale teraz je to pred tebou.
+
+25
+00:00:43,395 --> 00:00:45,438
+A tiež ľudia, na ktorých ti záleží.
+
+26
+00:00:45,688 --> 00:00:47,824
+Povedať nie zrazu pôsobí neslušne.
+
+27
+00:00:47,974 --> 00:00:48,857
+Alebo čudne.
+
+28
+00:00:49,007 --> 00:00:51,282
+Alebo ako keby si robil/a rozruch.
+
+29
+00:00:51,532 --> 00:00:53,808
+Toto je jeden z najťažších momentov.
+
+30
+00:00:53,958 --> 00:00:57,023
+Nie preto, že nemáš pevnú vôľu – ale preto, že nemáš.
+
+31
+00:00:57,023 --> 00:00:58,555
+nechcete nikoho sklamať.
+
+32
+00:00:58,705 --> 00:01:00,191
+Nechcete vysvetľovať.
+
+33
+00:00:58,705 --> 00:01:00,191
+Nechcete vysvetľovať.
+
+34
+00:01:00,341 --> 00:01:02,060
+Nechcete vyčnievať.
+
+35
+00:01:02,310 --> 00:01:04,817
+Cukor v týchto chvíľach nie je o chuti.
+
+36
+00:01:04,967 --> 00:01:06,407
+Je to o zapadnutí.
+
+37
+00:01:06,657 --> 00:01:07,632
+Jete ho.
+
+38
+00:01:07,782 --> 00:01:11,544
+Nie preto, že chcete—ale preto, že je to jednoduchšie ako povedať nie.
+
+39
+00:01:11,794 --> 00:01:14,534
+A potom sa možno cítite trochu mimo.
+
+40
+00:01:14,684 --> 00:01:15,659
+Fyzicky.
+
+41
+00:01:15,809 --> 00:01:16,738
+Emocionálne.
+
+42
+00:01:16,888 --> 00:01:18,885
+Ako keby ste porušili svoj vlastný sľub.
+
+43
+00:01:19,135 --> 00:01:22,478
+Ale tu je pravda: tieto chvíle sa stanú.
+
+44
+00:01:22,628 --> 00:01:24,207
+A nerobia vás slabými.
+
+45
+00:01:24,457 --> 00:01:25,897
+Robia vás ľudskými.
+
+46
+00:01:26,147 --> 00:01:28,190
+Prvým krokom je všimnúť si to.
+
+47
+00:01:28,340 --> 00:01:29,316
+Pomenovať to.
+
+48
+00:01:29,466 --> 00:01:31,323
+Nejde len o cukor.
+
+49
+00:01:29,466 --> 00:01:31,323
+Nejde len o cukor.
+
+50
+00:01:31,473 --> 00:01:33,238
+Je to o spoločenskom tlaku.
+
+51
+00:01:33,388 --> 00:01:34,456
+To je skutočné.
+
+52
+00:01:34,606 --> 00:01:35,813
+To je silné.
+
+53
+00:01:36,063 --> 00:01:38,200
+Nemôžete vždy ovládať miestnosť.
+
+54
+00:01:38,350 --> 00:01:40,486
+Ale môžete ovládať svoje uvedomenie.
+
+55
+00:01:40,736 --> 00:01:44,126
+A časom, s praxou, nájdete svoje slová.
+
+56
+00:01:44,276 --> 00:01:46,505
+Vaše malé spôsoby, ako zostať verní sebe.
+
+57
+00:01:46,755 --> 00:01:49,402
+Aj keď vám dezert hľadí do tváre.
+
+58
+00:01:49,803 --> 00:01:50,813
+Máte to pod kontrolou.
+
+59
+00:01:51,063 --> 00:01:52,642
+Uvidíme sa v ďalšej lekcii.
+

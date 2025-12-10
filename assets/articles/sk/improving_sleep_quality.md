@@ -1,0 +1,13 @@
+Konzumácia sladkých jedál alebo nápojov, najmä tesne pred spaním, môže interferovať s kvalitou spánku. Cukor môže spôsobiť energetické vrcholy, ktoré robia zaspávanie ťažkým. Navyše následný pád hladiny cukru v krvi počas noci môže viesť k prebúdzaniu a narušeným spánkovým cyklom. Výskum ukázal, že konzumácia jedál s vysokým obsahom cukru do dvoch hodín pred spaním môže znížiť efektivitu spánku až o 27% a zvýšiť nočné prebúdzania o 40%. Štúdie využívajúce technológiu monitorovania spánku preukázali, že vysoký príjem cukru môže znížiť množstvo hlbokého spánku, najregeneračnejšej fázy, až o 45 minút za noc.
+
+## Hormonálna rovnováha
+
+Príjem cukru ovplyvňuje hormóny zapojené do regulácie spánku, ako kortizol a inzulín. Veľké fluktuácie môžu narušiť prirodzený rytmus týchto hormónov, čo sťažuje tvojmu telu upokojiť sa a vstúpiť do regeneračného spánku. Znižovanie cukru pomáha podporovať vyváženejšie hormonálne prostredie priaznivé pre spánok. Klinické štúdie odhalili, že nadmerná konzumácia cukru môže oneskoriť prirodzený večerný nárast melatonínu, nášho primárneho spánkového hormónu, až o 90 minút. Navyše výskum ukazuje, že udržiavanie stabilných hladín cukru v krvi počas dňa môže zlepšiť prirodzený rytmus kortizolu, čo vedie k o 40% zlepšeniu času zasýpania.
+
+## Znižovanie nočných prebúdzaní
+
+Stabilizáciou hladín cukru v krvi počas dňa a vyhýbaním sa nočnému cukru minimalizuješ šance na zažitie nočnej hypoglykémie (nízky cukor v krvi). Tento stav môže spustiť uvoľňovanie stresových hormónov, ktoré ťa zobudia. Stabilnejší cukor v krvi sa často prekladá do konzolodovanejšieho, neprerušovaného spánku. Štúdie využívajúce kontinuálne monitorovanie glukózy ukázali, že účastníci so stabilným cukrom v krvi zažívajú o 60% menej nočných prebúdzaní v porovnaní s tými s nestabilnými úrovňami. Navyše výskum naznačuje, že udržiavanie stálych hladín glukózy môže zvýšiť trvanie REM spánku až o 25%, zlepšujúc konsolidáciu pamäte a emocionálne spracovanie.
+
+## Záver
+
+Zlepšovanie kvality spánku je významnou, aj keď niekedy prehliadanou výhodou znižovania príjmu cukru. Podporovaním hormonálnej rovnováhy a stabilného cukru v krvi vytváraš lepšie podmienky pre rýchlejšie zaspávanie a dlhšie spanie. Užívaj si regeneračnejší spánok znížením pridaných cukrov, najmä večer. Dlhodobé štúdie preukázali, že jednotlivci, ktorí udržiavajú nízky príjem cukru, hlásia o 35% zlepšenie celkovej kvality spánku už za dva týždne. Navyše výskum ukazuje, že lepšia kvalita spánku zo zníženej konzumácie cukru vytvára pozitívnu spätnú väzbu, čo uľahčuje odolávať túžbam po cukre nasledujúci deň.
